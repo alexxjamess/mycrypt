@@ -85,14 +85,51 @@ h2 {
 
 #home-desc {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    }
 
-}
+
 
 #btc-chart {
     max-width: 400px;
 }
 #home-main {
     display: flex;
+}
+
+/* Home Page Buttons to Other Pages*/
+
+#portfolio-button, #predictor-button {
+    padding: 33px;
+    text-align: center;
+}
+
+.button-home {
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    font-size: 110%;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #76FFDD;
+    padding: 15px 32px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-transform: uppercase;
+}
+
+.button-home:hover {
+    background-color: #00e9af;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.button-home:active {
+    background-color: #76FFDD;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 /*Footer*/
 
@@ -130,7 +167,7 @@ footer {
     }
 
 
-#portfolio-table {
+#portfolio-table, #predictor-table {
     padding: 10px;
     border: 2px solid #76FFDD;
     margin: 30px;
