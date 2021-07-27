@@ -11,8 +11,7 @@ A user would come to the website if they wished to estimate their future positio
 
 A user would come to the website if they wanted to evaluate their current portfolio. They would click the my portfolio page, they would then chose their desired cyrptocurrency coins and tokens he website will then bring up the current price. They can then imput their number of coins and it will calculate the value and the percentage of their portfolio that the coin occupies. They can continue to add different coins using the add coin button. This will allow them to make decisions on if they believe certain coins account for too much of their portfolio and if they wish to buy and sell any if so.
 
-Future developments of the website could include; Adding more coins/tokens to the website so that peoples portfilios can be more accurately portrayed.
-The website could also evolve to allow user to create account to store their portfolios and see up to date information.
+
 ## Features 
 
 - __Navigation Bar__
@@ -20,7 +19,7 @@ The website could also evolve to allow user to create account to store their por
   - Featured on all three pages, the full responsive navigation bar includes links to the Landing/Home page via the logo, My Portfolio and My Predictor Page which is identical in each page to allow for easy navigation.
   - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-<img src="./assets/images/readme-images/museum-view-nav-bar.jpg" alt="navigstion bar of MYCRYPT">
+<img src="./assets/images/readme-images/navbar-mycrypt.jpg" alt="navigstion bar of MYCRYPT">
 
 - __The landing page image__
 
@@ -28,7 +27,7 @@ The website could also evolve to allow user to create account to store their por
   - This section will contain a button which states 'explore' to take users to the explore page. This will help give the feeling of exclusivity when entering the website.
   - This section will contain an aniamtion of the logo zooming into to draw attention from the user and enhance the brand futher.
 
-<img src="./assets/images/readme-images/museum-view-home-page.jpg" alt="Museum View Home Page">
+<img src="./assets/images/readme-images/landing-mycrypt.jpg" alt="MYCRPT Home Page">
 
 - __The Footer__ 
 
@@ -36,10 +35,10 @@ The website could also evolve to allow user to create account to store their por
   - The footer is valuable to the user as it encourages them to keep connected via social media.
   -The footer also includes some standard copyright text
 
-<img src="./assets/images/readme-images/museum-view-footer.jpg" alt="footer of museum view">
+<img src="./assets/images/readme-images/footer-mycrypt.jpg" alt="footer of mycrypt">
 
 
-- __Explore Page__
+- __MY PORTFOLIO__
 
   - The explore page will give the user more information about the project and the infromation will be shown in a variety of formats.
   <img src="./assets/images/readme-images/museum-view-explore.jpg" alt="explore page of museum view">
@@ -47,32 +46,22 @@ The website could also evolve to allow user to create account to store their por
 
   <img src="assets/images/readme-images/museum-view-explore-text.jpg" alt="museum view explore page text">
 
-  - There is also an embbeded youtube video on the page that will allow the user to watch a video of a tour of an apartment. The user will be able to watch the video while on the page or clicking the title and going to youtube and going to a new page. The video used is https://www.youtube.com/watch?v=8xML0q0-mYI&t=60, this video was used as the Musuem View video was not completed in time.
-
+  
   - The last section of this page will be Three features which have been created by using Font Awesome to creat larger icons followed by some text to give a brief description of the feature. The Gallery was going to follow these however. I think this may have been two much information on one page so the gallery has its own page.
 
   <img src="assets/images/readme-images/museum-view-explore-features.jpg" alt="museum view explore page features">
 
-- __Gallery Page__
+- __MY PREDICTOR__
 
   - The gallery page allows the client to see a lot of images in a small place. Due to the nature of the project being HTML and CSS only I used a bootstrap to create the carousel. I then edited the code to include my own imgaes and also added a feature to show a title and small description of the image for users to see.
   <img src="assets/images/readme-images/museum-view-gallery.jpg" alt="museum view gallery">
 
-- __Register Page__
-
-  - This page will allow the user to register if they would like to express interest in buying or renting a property it will also allow the business gather information to see how desirable the properties are and can help use the figures to negotiate with other suppliers.  The Page containt a form to gather the information, an image and some benefits of the project to help prompt the user fill in the form if they have any doubts.
 
 
+## Features Left to Implement
 
-- __Contact Us Page__
-
-- The contact us page will allow the user to contact the webiste via a contact form if they have any questions about the project that they couldnt find the answers to. This page will also incluse some direct contact inforamation to the builder and developer incase there is a need for an emergency contact. There is a google map emebedded at the bottom of this page so the user can easily use this to see the exact location of the project.
-<img src="assets/images/readme-images/museum-view-contact-page.jpg" alt="museum view contact us page">
-
-### Features Left to Implement
-
-- Future Features could include a log in for approved buyers and renters to check on progress of the project and recieve relevent information and documents.
-- A general progress bar could be added to the website.
+- Future developments of the website could include; Adding more coins/tokens to the website so that peoples portfilios can be more accurately portrayed.
+- The website could also evolve to allow user to create account to store their portfolios and see up to date information.
 
 ## Testing 
 Please see wireframe-images folder within the images folder for images of wireframes completed at the start of the project.
@@ -98,24 +87,20 @@ The live link can be found here - https://alexxjamess.github.io/museum-view/
 ### Content 
 
 
-- The icons in the footer and for the features on the explore page were taken from [Font Awesome](https://fontawesome.com/)
+- The icons in the footer for social media were taken from [Font Awesome](https://fontawesome.com/)
 
-- The bootstrap for the carousel was from [get boot strap](https://getbootstrap.com/docs/4.0/components/carousel/)
-- The map was obtained through [google](https://www.google.com/maps?ll=51.485058,-3.175836&z=16&t=m&hl=en&gl=GB&mapclient=embed&cid=1162786141127752078)
-- the animated zoom was based of previous work completed on the love running project.
-- The bullet points on the register page where based on a video found on [Youtube](https://www.youtube.com/watch?v=w7xKQ63DnDk)
-- The submit and register button were created use ideas from [W3Schools](https://www.w3schools.com/css/css3_buttons.asp)
+- The calculate and Add button were created use ideas from [W3Schools](https://www.w3schools.com/css/css3_buttons.asp)
+
 ### Media
 
-- The photos used on the gallery were from [Pexels](https://www.pexels.com/search/luxury%20apartment%20building/) these will be replaced with images of the actual project once they become available.
+- The photos used on the gallery were from [Pexels](https://www.pexels.com/search/luxury%20apartment%20building/) 
 
-- Museum View Logo was created by myself along with logo for contact details of developer and contractor.
+- The Embedded Bitcoin Live Chart from [CoinLib](https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart)
 
-- The embedded video on the explore page is from [Youtube](https://www.youtube.com/watch?v=8xML0q0-mYI&t=60) this will also be replaced by the actual project video once it becomes available.
+- The  Embedded Live rolling price Chart from [CoinLib](https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart)
 
-- The bootstrap for the carousel was from [get boot strap](https://getbootstrap.com/docs/4.0/components/carousel/)
-- The map was obtained through [google](https://www.google.com/maps?ll=51.485058,-3.175836&z=16&t=m&hl=en&gl=GB&mapclient=embed&cid=1162786141127752078)
 
+- The charts are from [Google Charts](https://developers.google.com/chart)
 
 
 
