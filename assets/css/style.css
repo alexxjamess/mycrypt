@@ -53,6 +53,7 @@ h2 {
 }
 #nav-div {
     display: flex;
+    padding-left: 50px;
 }
 #menu {
     font-size: 100%;
