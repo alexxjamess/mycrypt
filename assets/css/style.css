@@ -128,7 +128,7 @@ footer {
     display: flex;
     flex-direction: column;
     }
-}
+
 
 #portfolio-form {
     padding: 10px;
@@ -148,4 +148,53 @@ footer {
 }
 .form-input:hover {
     border-color: #76FFDD;
+}
+
+/* For Buttons My Portfolio */
+
+#calculate-port {
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #76FFDD;
+    padding: 15px 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-transform: uppercase;
+    width: 100px;
+}
+
+#calculate-port:hover {
+    background-color: #00e9af;
+}
+
+#calculate-port:active {
+    background-color: #76FFDD;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#add-coin {
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #76FFDD;
+    padding: 15px 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-transform: uppercase;
+    width: 100px;
+}
+
+#add-coin:hover {
+    background-color: #00e9af;
+}
+
+#add-coin:active {
+    background-color: #76FFDD;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

@@ -51,30 +51,34 @@
             <section>
                 <div id="portfolio-main">
                 <h2>MY PORTFOLIO</h2>
-                <form id="portfolio-form">
-                <label for="coin-token">Coin/Token</label>
-                <input type="text" class="form-input" id="coin-token" name="coin-token" list="coins" >
-                <datalist id="coins">
+                <table id="portfolio-form">
+                    <tr>
+                        <th>Coin/Token</th>
+                        <th>Current Price</th>
+                        <th>No. Coins/Tokens</th>
+                        <th>Current Value</th>
+                        <th>% of Portfolio</th>
+                    </tr>
+                    <tr>
+                    <td><input type="text" class="form-input" id="coin-token" name="coin-token" list="coins" ><datalist id="coins">
                      <option value="BTC">Bitcoin</option>
                     <option value="ETH">Ethereum</option>
                     <option value="XRP">XRP</option>
                     <option value="ADA">Cardano</option>
                     <option value="USDT">Tether</option>
                     <option value="DOGE">Dogecoin</option>
-                </datalist>
-                
-                <label for="current-price">Current Price</label>
-                <input required class="form-input" type="text" id="current-price" name="current-price">
-                
-                <label for="my-amount">No. Coins/Tokens</label>
-                <input  required  class="form-input" type="number" id="my-amount" name="my-amount">
-                
-                <label for="current-value">Current Value</label>
-                <input required class="form-input" type="text" id="current-value" name="current-value" >
-                
-                <label for="per-portolio">% of Portfolio</label>
-                <input required  class="form-input" type="text" id="per-portolio" name="per-portolio"  >
-                </form>
+                </datalist></td>
+                    <td>API to retrive current price</td>
+                    <td><input  required  class="form-input" type="number" id="my-amount" name="my-amount"></td>
+                    <td>=No. of Coins/Tokens * Current Price</td>
+                    <td></td>
+                    </tr>
+                </table>
+                        
+                <br>
+                <button id ="calculate-port" type="submit" value="calculate-port">Calculate</button>
+                <br>
+                <button id ="add-coin" type="submit" value="add-coin">Add Coin</button>
             </div>
             </section>
             
