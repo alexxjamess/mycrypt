@@ -122,3 +122,30 @@ footer {
     color: #76FFDD;
 }
 
+/* my portfolio form*/
+
+#portfolio-main {
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+#portfolio-form {
+    padding: 10px;
+    border: 2px solid #76FFDD;
+    margin: 30px;
+    display: flex;
+   
+}
+#portfolio-form h2 {
+    margin-bottom: 20px;
+}
+.form-input {
+    color: #050505;
+    margin: 5px 0 20px 0;
+    border: 2px solid #ffffff;
+    padding: 10px;
+}
+.form-input:hover {
+    border-color: #76FFDD;
+}
