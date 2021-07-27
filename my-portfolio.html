@@ -10,6 +10,10 @@
     <title>MY PORTFOLIO | MY CRYPT</title>
 
         <link rel="stylesheet" href="assets/css/style.css">
+        <script>
+            google.charts.load('current', {packages: ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+        </script>
 
     
 </head>
@@ -51,7 +55,7 @@
             <section>
                 <div id="portfolio-main">
                 <h2>MY PORTFOLIO</h2>
-                <table id="portfolio-form">
+                <table id="portfolio-table">
                     <tr>
                         <th>Coin/Token</th>
                         <th>Current Price</th>
@@ -80,6 +84,7 @@
                 <br>
                 <button id ="add-coin" type="submit" value="add-coin">Add Coin</button>
             </div>
+            <div id="piechart" style="width: 900px; height: 500px;"></div>
             </section>
             
 
@@ -106,5 +111,6 @@
      <!-- font awesome script-->
      <script src="https://kit.fontawesome.com/99b3f5e043.js" crossorigin="anonymous"></script>
      <script src="/assets/js/script.js"></script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
      
 </body>

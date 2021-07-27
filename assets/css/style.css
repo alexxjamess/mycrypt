@@ -130,14 +130,22 @@ footer {
     }
 
 
-#portfolio-form {
+#portfolio-table {
     padding: 10px;
     border: 2px solid #76FFDD;
     margin: 30px;
     display: flex;
+    background-color: #ffffff;
+    color: black;
+    
    
 }
-#portfolio-form h2 {
+table, th, td {
+    border: 1px solid black;
+    text-align: center; 
+}
+
+#portfolio-table h2 {
     margin-bottom: 20px;
 }
 .form-input {
@@ -145,6 +153,7 @@ footer {
     margin: 5px 0 20px 0;
     border: 2px solid #ffffff;
     padding: 10px;
+    
 }
 .form-input:hover {
     border-color: #76FFDD;
