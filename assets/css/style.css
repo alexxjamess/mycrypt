@@ -80,6 +80,20 @@ h2 {
 .active {
     border-bottom: 1px solid #76FFDD;
 }
+
+/* Home Page Main Body */
+
+#home-desc {
+    display: flex;
+
+}
+
+#btc-chart {
+    max-width: 400px;
+}
+#home-main {
+    display: flex;
+}
 /*Footer*/
 
 footer {
