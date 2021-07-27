@@ -1,104 +1,123 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# MYCRYPT
 
-Welcome alexxjamess,
+MYCRYPT is a site that will be used for people to preform calculations  regarding their Cryptocurrency coins and tokens allowing them to forecast furture values and potential portfolio percentages.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<img src="" alt="MYCRYPT Snapshot on Muliptle Devices">
 
-`python3 -m http.server`
+## User Stories
+A user would come to the website if they wished to estimate their future position based on poissble price increase/decrease in their chosen cyrptocurrency coins and tokens. They would click the My predictor page, simply chose their desired cryto the website will then bring up the current price. They will then be able to imput their estimated future price, the webiste will then calcualte the value of their tokens based on the new price and indicate the prercentage change in this. This will allow the user to see differenct scenario prices and help them decide entry and exit levels into the market.
 
-A blue button should appear to click: _Make Public_,
+A user would come to the website if they wanted to evaluate their current portfolio. They would click the my portfolio page, they would then chose their desired cyrptocurrency coins and tokens he website will then bring up the current price. They can then imput their number of coins and it will calculate the value and the percentage of their portfolio that the coin occupies. They can continue to add different coins using the add coin button. This will allow them to make decisions on if they believe certain coins account for too much of their portfolio and if they wish to buy and sell any if so.
 
-Another blue button should appear to click: _Open Browser_.
+Future developments of the website could include; Adding more coins/tokens to the website so that peoples portfilios can be more accurately portrayed.
+The website could also evolve to allow user to create account to store their portfolios and see up to date information.
+## Features 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- __Navigation Bar__
 
-A blue button should appear to click: _Make Public_,
+  - Featured on all three pages, the full responsive navigation bar includes links to the Landing/Home page via the logo, My Portfolio and My Predictor Page which is identical in each page to allow for easy navigation.
+  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-Another blue button should appear to click: _Open Browser_.
+<img src="./assets/images/readme-images/museum-view-nav-bar.jpg" alt="navigstion bar of MYCRYPT">
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- __The landing page image__
 
-To log into the Heroku toolbelt CLI:
+  - The Landing image will be a image of the development logo to help create and promote the brand. 
+  - This section will contain a button which states 'explore' to take users to the explore page. This will help give the feeling of exclusivity when entering the website.
+  - This section will contain an aniamtion of the logo zooming into to draw attention from the user and enhance the brand futher.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<img src="./assets/images/readme-images/museum-view-home-page.jpg" alt="Museum View Home Page">
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- __The Footer__ 
 
-------
+  - The footer section includes links to the relevant social media sites for Museum View. The links will open to a new tab to allow easy navigation for the user. 
+  - The footer is valuable to the user as it encourages them to keep connected via social media.
+  -The footer also includes some standard copyright text
 
-## Release History
+<img src="./assets/images/readme-images/museum-view-footer.jpg" alt="footer of museum view">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- __Explore Page__
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  - The explore page will give the user more information about the project and the infromation will be shown in a variety of formats.
+  <img src="./assets/images/readme-images/museum-view-explore.jpg" alt="explore page of museum view">
+  - There is a small text paragraph giving a breif description of the project / sales pitch, within the paragraph there are two links one which will take the use to the register page and another which will take the user to a new page which will be a drop box page containing the plans of the project which should help the user easily find this information.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  <img src="assets/images/readme-images/museum-view-explore-text.jpg" alt="museum view explore page text">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+  - There is also an embbeded youtube video on the page that will allow the user to watch a video of a tour of an apartment. The user will be able to watch the video while on the page or clicking the title and going to youtube and going to a new page. The video used is https://www.youtube.com/watch?v=8xML0q0-mYI&t=60, this video was used as the Musuem View video was not completed in time.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  - The last section of this page will be Three features which have been created by using Font Awesome to creat larger icons followed by some text to give a brief description of the feature. The Gallery was going to follow these however. I think this may have been two much information on one page so the gallery has its own page.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+  <img src="assets/images/readme-images/museum-view-explore-features.jpg" alt="museum view explore page features">
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- __Gallery Page__
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  - The gallery page allows the client to see a lot of images in a small place. Due to the nature of the project being HTML and CSS only I used a bootstrap to create the carousel. I then edited the code to include my own imgaes and also added a feature to show a title and small description of the image for users to see.
+  <img src="assets/images/readme-images/museum-view-gallery.jpg" alt="museum view gallery">
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- __Register Page__
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  - This page will allow the user to register if they would like to express interest in buying or renting a property it will also allow the business gather information to see how desirable the properties are and can help use the figures to negotiate with other suppliers.  The Page containt a form to gather the information, an image and some benefits of the project to help prompt the user fill in the form if they have any doubts.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- __Contact Us Page__
 
-------
+- The contact us page will allow the user to contact the webiste via a contact form if they have any questions about the project that they couldnt find the answers to. This page will also incluse some direct contact inforamation to the builder and developer incase there is a need for an emergency contact. There is a google map emebedded at the bottom of this page so the user can easily use this to see the exact location of the project.
+<img src="assets/images/readme-images/museum-view-contact-page.jpg" alt="museum view contact us page">
 
-## FAQ about the uptime script
+### Features Left to Implement
 
-**Why have you added this script?**
+- Future Features could include a log in for approved buyers and renters to check on progress of the project and recieve relevent information and documents.
+- A general progress bar could be added to the website.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Testing 
+Please see wireframe-images folder within the images folder for images of wireframes completed at the start of the project.
+Please see [testing.md](/testing.md) for Testing
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Deployment
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-**So….?**
+The live link can be found here - https://alexxjamess.github.io/museum-view/
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+## Credits 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+### Content 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+- The icons in the footer and for the features on the explore page were taken from [Font Awesome](https://fontawesome.com/)
 
-Happy coding!
+- The bootstrap for the carousel was from [get boot strap](https://getbootstrap.com/docs/4.0/components/carousel/)
+- The map was obtained through [google](https://www.google.com/maps?ll=51.485058,-3.175836&z=16&t=m&hl=en&gl=GB&mapclient=embed&cid=1162786141127752078)
+- the animated zoom was based of previous work completed on the love running project.
+- The bullet points on the register page where based on a video found on [Youtube](https://www.youtube.com/watch?v=w7xKQ63DnDk)
+- The submit and register button were created use ideas from [W3Schools](https://www.w3schools.com/css/css3_buttons.asp)
+### Media
+
+- The photos used on the gallery were from [Pexels](https://www.pexels.com/search/luxury%20apartment%20building/) these will be replaced with images of the actual project once they become available.
+
+- Museum View Logo was created by myself along with logo for contact details of developer and contractor.
+
+- The embedded video on the explore page is from [Youtube](https://www.youtube.com/watch?v=8xML0q0-mYI&t=60) this will also be replaced by the actual project video once it becomes available.
+
+- The bootstrap for the carousel was from [get boot strap](https://getbootstrap.com/docs/4.0/components/carousel/)
+- The map was obtained through [google](https://www.google.com/maps?ll=51.485058,-3.175836&z=16&t=m&hl=en&gl=GB&mapclient=embed&cid=1162786141127752078)
+
+
+
+
+
+
