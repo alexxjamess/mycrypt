@@ -89,9 +89,9 @@
                 <div style="height:62px; background-color: #76FFDD; overflow:hidden; box-sizing: border-box; border: 1px solid #76FFDD; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #000000;padding:1px;padding: 0px; margin-bottom: 40px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
             </section>
             <section>
-                <div id="portfolio-main">
+                <div id='portfolio-main'>
                 <h2>MY PORTFOLIO</h2>
-                <table id="portfolio-table">
+                <table id='portfolio-table'>
                     <tr>
                         <th>Coin/Token</th>
                         <th>Current Price</th>
@@ -100,7 +100,8 @@
                         <th>% of Portfolio</th>
                     </tr>
                     <tr>
-                    <td><input type="text" class="form-input" id="coin-token" name="coin-token" list="coins" ><datalist id="coins">
+                    <td id="coin-token"><input type="text" class="form-input" id="coin-token-input" name="coin-token" list="coins" >
+                <datalist id="coins">
                      <option value="BTC">Bitcoin</option>
                     <option value="ETH">Ethereum</option>
                     <option value="XRP">XRP</option>
@@ -108,17 +109,17 @@
                     <option value="USDT">Tether</option>
                     <option value="DOGE">Dogecoin</option>
                 </datalist></td>
-                    <td>API to retrive current price</td>
-                    <td><input  required  class="form-input" type="number" id="my-amount" name="my-amount"></td>
-                    <td>=No. of Coins/Tokens * Current Price</td>
+                    <td id="current-price1">5</td>
+                    <td id="my-amount" ><input  required id="my-amount-input"  class="form-input" type="number"  name="my-amount"></td>
+                    <td id="current-value1"></td>
                     <td></td>
                     </tr>
                 </table>
                         
                 <br>
-                <button id ="calculate-port" type="submit" value="calculate-port">Calculate</button>
+                <button id ="calculate-port" onclick="calculateCurrentValue()" value="calculate-port">Calculate</button>
                 <br>
-                <button id ="add-coin" type="submit" value="add-coin">Add Coin</button>
+                <button id ="add-coin" onclick="addCoin()" value="add-coin">Add Coin</button>
             </div>
             <div id="chart_div" style="width: 900px; height: 500px;"></div>
             
