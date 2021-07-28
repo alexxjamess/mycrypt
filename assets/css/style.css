@@ -160,7 +160,7 @@ footer {
     color: #76FFDD;
 }
 
-/* my portfolio form*/
+/* my portfolio and my predictor table */
 
 #portfolio-main {
     display: flex;
@@ -197,7 +197,7 @@ table, th, td {
     border-color: #76FFDD;
 }
 
-/* For Buttons My Portfolio */
+/* For Buttons My Portfolio and My Predictor */
 
 #calculate-port {
     text-align: center;
@@ -207,10 +207,11 @@ table, th, td {
     border-radius: 15px;
     cursor: pointer;
     background-color: #76FFDD;
-    padding: 15px 15px;
+    padding: 15px 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-transform: uppercase;
     width: 100px;
+    margin:10px
 }
 
 #calculate-port:hover {
@@ -234,6 +235,7 @@ table, th, td {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-transform: uppercase;
     width: 100px;
+    margin: 10px;
 }
 
 #add-coin:hover {
