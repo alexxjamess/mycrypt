@@ -4,19 +4,40 @@
  * This will find current price based on chosen item drop down list 
  * this should be an API but couldnt get it to work
  */
-  
+  // api url
+const api_url =
+"https://api.coingecko.com/api/v3/simple/price?ids=tether&vs_currencies=usd";
+
+// Defining async function
+async function getapi(url) {
+
+// Storing response
+const response = await fetch(url);
+
+// Storing data in form of JSON
+var data = await response.json();
+console.log(data);
+if (response) {
+    
+}
+show(data);
+}
+// Calling that async function
+getapi(api_url);
+
+
+// Function to define innerHTML for HTML table
+function show(data) {
+
+let tab = data
+		
+	}
+	// Setting innerHTML as tab variable
+	document.getElementById("current-price1").innerHTML = tab;
+
+
  
-function getCurrentPrice() {
-    var answer=document.getElementById("coins");
-    let price= document.getElementById('current-price1').innerHTML;
-     if(answer[answer.selectedIndex].value == "BTC") {
-        price = 39719.89; 
-                 
-} else if(answer[answer.selectedIndex].value == "ETH") {
-    price = 2293.03;
-} else if(answer[answer.selectedIndex].value == "XRP")
-    price = 0.72;
-} 
+
 
 
 
@@ -24,12 +45,13 @@ function getCurrentPrice() {
  * If calculate button is clicked this will run a function
  * to calcualte current value by multipying current price and the users inputed amount
  */
+ const currentPriceRef = document.querySelector("#current-price1")
+ const myAmountRef = document.querySelector("#my-amount-input")
 
-function calculateCurrentValue(){
-    currentPrice = parseFloat(document.getElementById('current-price1')).value;
-    myAmount = parseFloat(document.getElementById('my-amount-input')).value;
-	result = currentPrice * myAmount;
-	document.getElementById("current-value1").innerHTML = result
+    const calculateCurrentValue = () => {
+    const results = +currentPriceRef.value * +myAmountRef.value
+    document.getElementById("current-value1").innerHTML = results
+        
 }
 
 /**
@@ -97,7 +119,7 @@ function drawChart() {
         data.addColumn('string', 'Coin/Token');
         data.addColumn('number', 'Percentage');
         data.addRows([
-          ['BTC', 3],
+          [document.getElementById("coin-token"), document.getElementById("current-value1")],
           ['XRP', 1],
           ['ADA', 1],
           ['ETH', 1],
