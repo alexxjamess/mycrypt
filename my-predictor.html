@@ -58,7 +58,7 @@
                     <th>Percentage Change</th>
                 </tr>
                 <tr>
-                <td><input type="text" class="form-input" id="coin-token" name="coin-token" list="coins" ><datalist id="coins">
+                <td><input type="text" class="form-input" id="coin-token-pred" name="coin-token" list="coins" ><datalist id="coins">
                  <option value="BTC">Bitcoin</option>
                 <option value="ETH">Ethereum</option>
                 <option value="XRP">XRP</option>
@@ -67,9 +67,9 @@
                 <option value="DOGE">Dogecoin</option>
             </datalist></td>
                 <td>API to retrive current price</td>
-                <td><input  required  class="form-input" type="number" id="my-amount" name="my-amount"></td>
+                <td><input  required  class="form-input" type="number" id="my-amount-input-pred" name="my-amount"></td>
                 <td>=No. of Coins/Tokens * Current Price</td>
-                <td><input  required  class="form-input" type="number" id="future-price" name="future-price"></td> 
+                <td><input  required  class="form-input" type="number" id="future-price-input" name="future-price"></td> 
                 <td>=No of Coins/Tokens * Future Price</td>
                 <td>=(Future Value-Current Value) / Current Value × 100.</td>          
                 </tr>
@@ -78,9 +78,9 @@
             </table>
                     
             <br>
-            <button id ="calculate-port" type="submit" value="calculate-port">Calculate</button>
+            <button id ="calculate-port"  value="calculate-port">Calculate</button>
             <br>
-            <button id ="add-coin" type="submit" value="add-coin">Add Coin</button>
+            <button id ="add-coin"  onclick="addCoinPred()" value="add-coin">Add Coin</button>
         </div>
             </section>
         </main>

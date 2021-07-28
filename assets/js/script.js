@@ -1,50 +1,42 @@
-/* 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName('button');
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getElementById('calculate-port'))
-                calculateCurrentValue();
-            if (this.getElementById('add-coin'))
-                addCoin()
-            } else {
-            
-            }
-        });
-    }
+
+/**
+ * This will find current price based on chosen item drop down list 
+ * this should be an API but couldnt get it to work
+ */
+function getCurrentPrice() {
+  let coinsTokens = document.getElementsById("coin-token");
+  let price;
+ 
+  if (coinsTokens === 'BTC') {
+  price = 39719.89; 
+
+} else if (coinsTokens === 'ETH') {
+    price = 2293.03;
+} else if (coinsTokens === 'XRP') {
+    price = 0.72;
+} else {
+   price =  0;
+}
+}  
+document.getElementById('current-price1').innerHTML = price
 
 /**
  * If calculate button is clicked this will run a function
  * to calcualte current value by multipying current price and the users inputed amount
  */
-/*
- function calculateCurrentValue() {
-
-    let currentPrice =(document.getElementById('current-price1').innerHTML);
-    let myAmount =(document.getElementById('my-amount').innerHTML);
-    let currentValue =(document.getElementbById('current-value1').innerHTML)
-   
-    if (myAmount => 0) {
-        return currentValue.innerHTML= [currentPrice * myAmount];
-    
-    } else {
-        alert('Please Enter a Value Greater Than Zero');
-        throw 'Please Enter a Value Greater Than Zero';
-    };
- }
- 
-/**
-* If Add Coin button is pressed this will add a row
-* to table as above
-*/
 
 function calculateCurrentValue(){
-    currentPrice =document.getElementById('current-price1').value;
-    myAmount =document.getElementById('my-amount-input').value;
+    currentPrice = document.getElementById('current-price1').value;
+    myAmount = document.getElementById('my-amount-input').value;
 	result = currentPrice * myAmount;
-	document.getElementById("current-value1").value = result
+	document.getElementById("current-value1").innerHTML = result
 }
+
+/**
+* If Add Coin button is pressed this will add a row
+* to table for my portfolio
+*/
 
 function addCoin()
 {
@@ -60,5 +52,29 @@ currentPrice1.innerHTML="5";
 myAmount1.innerHTML=document.getElementById("my-amount-input");
 currentValue1.innerHTML="=Current Price * My Amount";
 percPort1.innerHTML="";
+
+}
+/**
+* If Add Coin button is pressed this will add a row
+* to table for my predicotr
+*/
+function addCoinPred()
+{
+var x=document.getElementById('predictor-table').insertRow(2);
+var coinTokenPred = x.insertCell(0);
+var currentPricePred = x.insertCell(1);
+var myAmountPred = x.insertCell(2);
+var currentValuePred = x.insertCell(3);
+var futurePrice1 = x.insertCell(4);
+var futureValue1 = x.insertCell(5);
+var percChange1 = x.insertCell(6);
+
+coinTokenPred.innerHTML=document.getElementById("coin-token-pred");
+currentPricePred.innerHTML="5";
+myAmountPred.innerHTML=document.getElementById("my-amount-input-pred");
+currentValuePred.innerHTML="No. of Coins/Tokens * Current Price";
+futurePrice1.innerHTML=document.getElementById("future-price-input");
+futureValue1.innerHTML="=No of Coins/Tokens * Future Price";
+percChange1.innerHTML="=(Future Value-Current Value) / Current Value × 100";
 
 }
