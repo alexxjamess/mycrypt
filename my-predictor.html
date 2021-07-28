@@ -80,15 +80,15 @@
                 <td><input  required  class="form-input" type="number" id="my-amount-input-pred" name="my-amount"></td>
                 <td>=No. of Coins/Tokens * Current Price</td>
                 <td><input  required  class="form-input" type="number" id="future-price-input" name="future-price"></td> 
-                <td>=No of Coins/Tokens * Future Price</td>
-                <td>=(Future Value-Current Value) / Current Value × 100.</td>          
+                <td id="future-value"></td>
+                <td ></td>          
                 </tr>
                 
 
             </table>
                     
             <br>
-            <button id ="calculate-port"  value="calculate-port">Calculate</button>
+            <button id ="calculate-port" onclick="calculateFutureValue()" value="calculate-port">Calculate</button>
             <br>
             <button id ="add-coin"  onclick="addCoinPred()" value="add-coin">Add Coin</button>
         </div>

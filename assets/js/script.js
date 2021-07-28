@@ -113,3 +113,13 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('chart-div'));
     chart.draw(data, options);
                 }
+/**
+* Function to calculate the future value of coin/token
+* Users input of Number of Coins * User Input of Future Value
+*/
+function calculateFutureValue(){
+    futurePrice = document.getElementById('future-price-input').value;
+    myAmountPred = document.getElementById('my-amount-input-pred').value;
+	result = futurePrice * myAmountPred;
+	document.getElementById("future-value").innerHTML = result
+}
