@@ -6,7 +6,7 @@
  */
 function getCurrentPrice() {
   let coinsTokens = document.getElementsById("coin-token");
-  let price;
+  let price= document.getElementById('current-price1').innerHTML;
  
   if (coinsTokens === 'BTC') {
   price = 39719.89; 
@@ -17,9 +17,9 @@ function getCurrentPrice() {
     price = 0.72;
 } else {
    price =  0;
-}
+} 
 }  
-document.getElementById('current-price1').innerHTML = price
+
 
 /**
  * If calculate button is clicked this will run a function
@@ -106,9 +106,13 @@ function drawChart() {
 ]);
           
 // Set chart options
-    var options = {'title':'My Portfolio',
-                                 'width':400,
-                                 'height':300};
+    var options = {
+        'title':'My Portfolio',
+        is3D:true,
+        colors:['#76ffdd','#5eccb1','#479985','#2f6658','#18332c'],
+        'width':400,
+        'height':300};
+                                 
 // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('chart-div'));
     chart.draw(data, options);
