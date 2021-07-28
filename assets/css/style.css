@@ -197,6 +197,10 @@ table, th, td {
     border-color: #76FFDD;
 }
 
+.dollars:before {
+        content: "$";
+}
+
 /* For Buttons My Portfolio and My Predictor */
 
 #calculate-port {
@@ -246,4 +250,9 @@ table, th, td {
     background-color: #76FFDD;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+/* For instructions both pages*/
+
+.instructions {
+    padding-left: 50px;
 }

@@ -4,21 +4,20 @@
  * This will find current price based on chosen item drop down list 
  * this should be an API but couldnt get it to work
  */
-function getCurrentPrice() {
-  let coinsTokens = document.getElementsById("coin-token");
-  let price= document.getElementById('current-price1').innerHTML;
+  
  
-  if (coinsTokens === 'BTC') {
-  price = 39719.89; 
-
-} else if (coinsTokens === 'ETH') {
+function getCurrentPrice() {
+    var answer=document.getElementById("coins");
+    let price= document.getElementById('current-price1').innerHTML;
+     if(answer[answer.selectedIndex].value == "BTC") {
+        price = 39719.89; 
+                 
+} else if(answer[answer.selectedIndex].value == "ETH") {
     price = 2293.03;
-} else if (coinsTokens === 'XRP') {
+} else if(answer[answer.selectedIndex].value == "XRP")
     price = 0.72;
-} else {
-   price =  0;
 } 
-}  
+
 
 
 /**
@@ -27,8 +26,8 @@ function getCurrentPrice() {
  */
 
 function calculateCurrentValue(){
-    currentPrice = document.getElementById('current-price1').value;
-    myAmount = document.getElementById('my-amount-input').value;
+    currentPrice = parseFloat(document.getElementById('current-price1')).value;
+    myAmount = parseFloat(document.getElementById('my-amount-input')).value;
 	result = currentPrice * myAmount;
 	document.getElementById("current-value1").innerHTML = result
 }
@@ -110,8 +109,8 @@ function drawChart() {
         'title':'My Portfolio',
         is3D:true,
         colors:['#76ffdd','#5eccb1','#479985','#2f6658','#18332c'],
-        'width':400,
-        'height':300};
+        'width':500,
+        'height':400};
                                  
 // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('chart-div'));

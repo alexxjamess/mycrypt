@@ -50,6 +50,7 @@
             </section>
             <section>
                 <div id='portfolio-main'>
+                <div class="instructions">                
                 <h2>MY PORTFOLIO</h2>
                 <h3>How to Use</h3>
                 <p>
@@ -60,6 +61,8 @@
                         <li>Click Add Coin if you want to add more coins</li>
                     </ul>
                 </p>
+                </div>
+                <div>
                 <table id='portfolio-table'>
                     <tr>
                         <th>Coin/Token</th>
@@ -78,17 +81,18 @@
                     <option class="coins-tokens" value="USDT">Tether</option>
                     <option class="coins-tokens" value="DOGE">Dogecoin</option>
                 </datalist></td>
-                    <td id="current-price1"></td>
+                    <td id="current-price1" class ="dollars"></td>
                     <td id="my-amount" ><input  required id="my-amount-input"  class="form-input" type="number"  name="my-amount"></td>
-                    <td id="current-value1"></td>
+                    <td id="current-value1" class ="dollars"></td>
                     <td></td>
                     </tr>
                 </table>
                         
-                <br>
-                <button id ="calculate-port" onclick="calculateCurrentValue()" value="calculate-port">Calculate</button>
-                <br>
-                <button id ="add-coin" onclick="addCoin()" value="add-coin">Add Coin</button>
+                <div>
+                    <button id ="calculate-port" onclick="calculateCurrentValue()" value="calculate-port">Calculate</button>
+                    
+                    <button id ="add-coin" onclick="addCoin()" value="add-coin">Add Coin</button>
+            </div>
             </div>
             <div id="chart-div"></div>
             
