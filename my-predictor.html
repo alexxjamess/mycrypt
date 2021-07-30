@@ -70,15 +70,15 @@
                     <th>Percentage Change</th>
                 </tr>
                 <tr>
-                <td><input type="text" class="form-input" id="coin-token-pred" name="coin-token" list="coins" ><datalist id="coins">
-                 <option value="BTC">Bitcoin</option>
-                <option value="ETH">Ethereum</option>
-                <option value="XRP">XRP</option>
-                <option value="ADA">Cardano</option>
-                <option value="USDT">Tether</option>
-                <option value="DOGE">Dogecoin</option>
+                <td><input type="text" oninput= "onCurrencySelect()" class="form-input" id="coin-token-pred" name="coin-token" list="coins" ><datalist id="coins">
+                 <option value="bitcoin">Bitcoin</option>
+                <option value="ethereum">Ethereum</option>
+                <option value="xrp">XRP</option>
+                <option value="cardano">Cardano</option>
+                <option value="tether">Tether</option>
+                <option value="dogecoin">Dogecoin</option>
             </datalist></td>
-                <td>API to retrive current price</td>
+                <td id=current-price>API to retrive current price</td>
                 <td><input  required  class="form-input" type="number" id="my-amount-input-pred" name="my-amount"></td>
                 <td class ="dollars">=No. of Coins/Tokens * Current Price</td>
                 <td><input  required  class ="dollars" class="form-input" type="number" id="future-price-input" name="future-price"></td> 

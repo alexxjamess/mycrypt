@@ -72,15 +72,15 @@
                         <th>% of Portfolio</th>
                     </tr>
                     <tr>
-                    <td id="coin-token"><input type="text" class="form-input" id="coin-token-input" name="coin-token" list="coins" >
-                <datalist id="coins">
-                    <option class="coins-tokens" value="BTC">Bitcoin</option>
-                    <option class="coins-tokens" value="ETH">Ethereum</option>
-                    <option class="coins-tokens" value="XRP">XRP</option>
-                    <option class="coins-tokens" value="ADA">Cardano</option>
-                    <option class="coins-tokens" value="USDT">Tether</option>
-                    <option class="coins-tokens" value="DOGE">Dogecoin</option>
-                </datalist></td>
+                        <td><input type="text" oninput= "onCurrencySelect()" class="form-input" id="coin-token-port" name="coin-token" list="coins" >
+                            <datalist id="coins">
+                            <option value="bitcoin">BTC</option>
+                           <option value="ethereum">ETH</option>
+                           <option value="ripple">XRP</option>
+                           <option value="cardano">ADA</option>
+                           <option value="tether">USDT</option>
+                           <option value="dogecoin">DOGE</option>
+                       </datalist></td>
                     <td id="current-price1" class ="dollars"></td>
                     <td id="my-amount" ><input  required id="my-amount-input"  class="form-input" type="number"  name="my-amount"></td>
                     <td id="current-value1" class ="dollars"></td>
