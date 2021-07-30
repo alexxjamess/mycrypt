@@ -10,6 +10,7 @@
 header {
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 body {
@@ -54,6 +55,7 @@ h2 {
 #nav-div {
     display: flex;
     padding-left: 50px;
+    align-items: center;
 }
 #menu {
     font-size: 100%;
@@ -135,17 +137,16 @@ h2 {
 /*Footer*/
 
 footer {
-    bottom: 0;
-    right: 0;
+   
     padding: 30px;
 }
 .copyright {
     color: #ffffff;
-    text-align: center;
+    text-align: right;
 }
 
 .social-networks {
-    text-align: center;
+    text-align: right;
 }
 .social-networks > li {
     display: inline-block;
