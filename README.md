@@ -4,7 +4,7 @@ MYCRYPT is a site that will be used for people to preform calculations  regardin
 
 
 
-<img src="" alt="MYCRYPT Snapshot on Muliptle Devices">
+<img src="./assets/images/readme-images/responsive-mycrypt.jpg" alt="MYCRYPT Snapshot on Muliptle Devices">
 
 ## User Stories
 A user would come to the website if they wished to estimate their future position based on poissble price increase/decrease in their chosen cyrptocurrency coins and tokens. They would click the My predictor page, simply chose their desired cryto the website will then bring up the current price. They will then be able to imput their estimated future price, the webiste will then calcualte the value of their tokens based on the new price and indicate the prercentage change in this. This will allow the user to see differenct scenario prices and help them decide entry and exit levels into the market.
