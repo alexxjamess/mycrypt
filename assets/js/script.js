@@ -12,17 +12,17 @@ async function makeAPICall(url) {
   return data;
 
 };
-async function getCurrentPriceForCurrency(currency) {
+  async function getCurrentPriceForCurrency(currency) {
   const data = await makeAPICall(
     `${API_BASE_URL}?ids=${currency}&vs_currencies=usd`
   );
   return data[currency].usd;
 }
-function onCurrencySelect() {
+async function onCurrencySelect() {
   const currency = document.getElementById('coin-token-port').value;
-  const currentPrice = getCurrentPriceForCurrency(currency);
+  const currentPrice = await getCurrentPriceForCurrency(currency);
   document.getElementById('current-price1').innerHTML = currentPrice;
-  console.log(currentPrice)
+  
     
 }
 /**
@@ -34,7 +34,12 @@ const myAmountRef = document.querySelector('#my-amount-input');
 const calculateCurrentValue = () => {
   const results = +currentPriceRef.value * +myAmountRef.value;
   document.getElementById('current-value1').innerHTML = results;
-}
+};
+/**
+ * Function to calculate percentage of portfolio
+ * to table for my portfolio
+*/
+
 /**
  * If Add Coin button is pressed this will add a row
  * to table for my portfolio
@@ -46,7 +51,7 @@ function addCoin() {
   let myAmount1 = x.insertCell(2);
   let currentValue1 = x.insertCell(3);
   let percPort1 = x.insertCell(4);
-  coinToken.innerHTML = document.getElementById('coin-token-input');
+  coinToken.innerHTML = document.getElementById('coins');
   currentPrice1.innerHTML = '5';
   myAmount1.innerHTML = document.getElementById('my-amount-input');
   currentValue1.innerHTML = '=Current Price * My Amount';
