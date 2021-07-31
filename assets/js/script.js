@@ -134,10 +134,10 @@
   * Users input of Number of Coins * User Input of Future Value
   */
  function calculateFutureValue() {
-     const futureValuePredictor = document.getElementById('future-value').value;
-     const currentValuePredictor = document.getElementById('current-value-predictor').value
-     const result = futurePrice * myAmountPred;
-     document.getElementById('future-value').innerHTML = result;
+     const futurePricePred = document.getElementById('future-price-input').value;
+     const myAmountPred = document.getElementById('my-amount-input-pred').value
+     const resultFutureValue = futurePricePred * myAmountPred;
+     document.getElementById('future-value').innerHTML = resultFutureValue;
  }
  
  /**
@@ -146,9 +146,9 @@
   */
  
  function calculatePercentageChange() {
-     const futureValuePredictor = 5;
-     const currentValuePredictor = 10;
-     conresult = ((futureValuePredictor - currentValuePredictor) / currentValuePredictor * 100);
-     document.getElementById('percentage-change').innerHTML = result;
+     const futureValuePredictor = document.getElementById('future-value').value;
+     const currentValuePredictor = document.getElementById('current-value-predictor').value
+     const resultPercentageChange = ((futureValuePredictor - currentValuePredictor) / currentValuePredictor * 100);
+     document.getElementById('percentage-change').innerHTML = resultPercentageChange;
      console.log(result)
  }

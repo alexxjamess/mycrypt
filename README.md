@@ -23,9 +23,9 @@ A user would come to the website if they wanted to evaluate their current portfo
 
 - __The landing page image__
 
-  - The Landing image will be a image of the development logo to help create and promote the brand. 
-  - This section will contain a button which states 'explore' to take users to the explore page. This will help give the feeling of exclusivity when entering the website.
-  - This section will contain an aniamtion of the logo zooming into to draw attention from the user and enhance the brand futher.
+  - The landing page will contain a short tag line followed by two navigation buttons to take the user to the functional pages. 
+  - There will also we a widget at the top of the page and all pages, which is a scrolling current price list of cryptocurrencies which is from [CoinLib](https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart). This has then been styled to match the scheme of the website.
+  - Another widget has also been included on this page showing the corrunt price and trend information also from [CoinLib](https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart)
 
 <img src="./assets/images/readme-images/landing-mycrypt.jpg" alt="MYCRPT Home Page">
 
@@ -40,28 +40,33 @@ A user would come to the website if they wanted to evaluate their current portfo
 
 - __MY PORTFOLIO__
 
-  - The explore page will give the user more information about the project and the infromation will be shown in a variety of formats.
-  <img src="./assets/images/readme-images/museum-view-explore.jpg" alt="explore page of museum view">
-  - There is a small text paragraph giving a breif description of the project / sales pitch, within the paragraph there are two links one which will take the use to the register page and another which will take the user to a new page which will be a drop box page containing the plans of the project which should help the user easily find this information.
-
-  <img src="assets/images/readme-images/museum-view-explore-text.jpg" alt="museum view explore page text">
-
+  - The My Portfolio page will first have a brief text paragrpagh using an unordered list to show how to use this feature.
   
-  - The last section of this page will be Three features which have been created by using Font Awesome to creat larger icons followed by some text to give a brief description of the feature. The Gallery was going to follow these however. I think this may have been two much information on one page so the gallery has its own page.
+  - There will then be a table where the user can select a coin/token from a drop down iput list, which will then display the current price of the coin which is done using an API from [Coingecko](https://www.coingecko.com/api/documentations/v3)
+  - The user then can enter the number of tokens they own/wish to own usign an input box.
+  - The user will then click the calculate button which should use a function to calculate the current value of that coin and the percentage of that portfolio it makes up.
+  - The user will also be able to click the add coin button if they wish to add more rows to the table.
+  - The calculate button will also then create a pie chart from [Google Charts](https://developers.google.com/chart) to help display this information.
 
-  <img src="assets/images/readme-images/museum-view-explore-features.jpg" alt="museum view explore page features">
+
+<img src="./assets/images/readme-images/portfolio-mycrypt.jpg" alt="my portfolio page of my crypt">
 
 - __MY PREDICTOR__
 
-  - The gallery page allows the client to see a lot of images in a small place. Due to the nature of the project being HTML and CSS only I used a bootstrap to create the carousel. I then edited the code to include my own imgaes and also added a feature to show a title and small description of the image for users to see.
-  <img src="assets/images/readme-images/museum-view-gallery.jpg" alt="museum view gallery">
+  - The My Predictor page will first have a brief text paragrpagh using an unordered list to show how to use this feature.
+  - The user then can enter the number of tokens they own/wish to own usign an input box.
+  - The user will then click the calculate button which should use a function to calculate the current value of that coin.
+  - the user will also have the option to iput a desired future price, the button will also calculate the future value based on their current number of tokens and the futue price.
+  - There is also a function which will calculate the percentage change from the current value to the future value.
+  - The user will also be able to click the add coin button if they wish to add more rows to the table.
+<img src="./assets/images/readme-images/predictor-mycrypt.jpg" alt="my predictor page of my crypt">
 
 
 
 ## Features Left to Implement
 
 - Future developments of the website could include; Adding more coins/tokens to the website so that peoples portfilios can be more accurately portrayed.
-- The website could also evolve to allow user to create account to store their portfolios and see up to date information.
+- The website could also evolve to allow user to create an account to store their portfolios and see up to date information.
 
 ## Testing 
 Please see wireframe-images folder within the images folder for images of wireframes completed at the start of the project.
@@ -77,7 +82,7 @@ This section should describe the process you went through to deploy the project 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://alexxjamess.github.io/museum-view/
+The live link can be found here - https://alexxjamess.github.io/mycrypt/
 
 
 ## Credits 
@@ -93,7 +98,7 @@ The live link can be found here - https://alexxjamess.github.io/museum-view/
 
 ### Media
 
-- The photos used on the gallery were from [Pexels](https://www.pexels.com/search/luxury%20apartment%20building/) 
+- The photo used on the background were from [Pexels](https://www.pexels.com/photo/half-moon-596132/) 
 
 - The Embedded Bitcoin Live Chart from [CoinLib](https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart)
 
