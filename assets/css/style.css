@@ -174,13 +174,13 @@ footer {
     border: 2px solid #76FFDD;
     margin: 30px;
     display: flex;
-    background-color: #ffffff;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     
    
 }
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #76FFDD;
     text-align: center; 
 }
 
@@ -188,10 +188,11 @@ table, th, td {
     margin-bottom: 20px;
 }
 .form-input {
-    color: #050505;
+    color: #ffffff;
     margin: 5px 0 20px 0;
     border: 2px solid #ffffff;
     padding: 10px;
+    background-color: #000000;
     
 }
 .form-input:hover {
