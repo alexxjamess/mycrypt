@@ -291,4 +291,13 @@ table, th, td {
     #logo a {
         font-size: 2.5rem;
     }
+      
+    tr { display: block; 
+        float: left; }
+    th, td {
+        display: block;
+        min-height: 70px;
+
+     }
+    
 }
