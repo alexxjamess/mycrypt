@@ -32,9 +32,7 @@
                     <a href="my-predictor.html" >MY PREDICTOR</a>
                 </li>  
                 
-                
-                
-               
+                          
             </ul>
         </nav>
         </div>
@@ -80,10 +78,10 @@
             </datalist></td>
                 <td id=current-price class="dollars"></td>
                 <td><input  required  class="form-input" type="number" id="my-amount-input-pred" name="my-amount"></td>
-                <td class ="dollars">=No. of Coins/Tokens * Current Price</td>
+                <td id= "current-value-predictor" class ="dollars"></td>
                 <td><input  required  class ="dollars" class="form-input" type="number" id="future-price-input" name="future-price"></td> 
                 <td id="future-value" class ="dollars"></td>
-                <td ></td>          
+                <td id="percentage-change"></td>          
                 </tr>
                 
 
@@ -91,7 +89,7 @@
                     
             <div>
                 <button id ="calculate-port" onclick="calculateFutureValue()" value="calculate-port">Calculate</button>
-                 <button id ="add-coin"  onclick="addCoinPred()" value="add-coin">Add Coin</button>
+                 <button id ="add-coin"  onclick="addCoinPred();calculatePercentageChange()" value="add-coin">Add Coin</button>
             </div>
         </div>
             </section>
