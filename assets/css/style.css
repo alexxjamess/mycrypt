@@ -299,5 +299,9 @@ table, th, td {
         min-height: 70px;
 
      }
+     #portfolio-table, #predictor-table {
+        padding: 0px;
+        
+    }
     
 }
