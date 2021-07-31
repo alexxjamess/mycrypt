@@ -22,18 +22,26 @@ async function onCurrencySelect() {
   const currency = document.getElementById('coin-token-port').value;
   const currentPrice = await getCurrentPriceForCurrency(currency);
   document.getElementById('current-price1').innerHTML = currentPrice;
-  
-    
+}
+  /**
+ * If calculate button is clicked this will run a function
+ * to calcualte current value by multipying current price and the users inputed amount predictor page
+ */
+  async function onCurrencySelectPred() {
+    const currency = document.getElementById('coin-token-pred').value;
+    const currentPrice = await getCurrentPriceForCurrency(currency);
+    document.getElementById('current-price').innerHTML = currentPrice;
 }
 /**
  * If calculate button is clicked this will run a function
  * to calcualte current value by multipying current price and the users inputed amount
  */
-const currentPriceRef = document.querySelector('#current-price1');
-const myAmountRef = document.querySelector('#my-amount-input');
-const calculateCurrentValue = () => {
-  const results = +currentPriceRef.value * +myAmountRef.value;
+const currentPriceRef = document.getElementById("current-price");
+const myAmountRef = document.getElementById('my-amount-input');
+function calculateCurrentValue() {
+    const results = +currentPriceRef.value* +myAmountRef.value;
   document.getElementById('current-value1').innerHTML = results;
+  console.log(results)
 };
 /**
  * Function to calculate percentage of portfolio
