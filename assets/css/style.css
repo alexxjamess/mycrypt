@@ -176,6 +176,7 @@ footer {
     display: flex;
     background-color: #000000;
     color: rgb(255, 255, 255);
+    width: fit-content;
     
    
 }
@@ -257,4 +258,37 @@ table, th, td {
 
 .instructions {
     padding-left: 50px;
+}
+/*Media Queries*/
+
+@media screen and (max-width: 1000px) {
+    #home-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    
+}
+    
+
+@media screen and (max-width: 450px) {
+    #home-main {
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+    }
+    #rolling-price iframe {
+        margin-left: 40px;
+        width: 342px;
+    }
+    
+    #nav-div {
+        padding-left: 0px;
+        font-size: 0.8rem;
+    }
+    #logo a {
+        font-size: 2.5rem;
+    }
 }
