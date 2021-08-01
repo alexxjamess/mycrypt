@@ -68,16 +68,16 @@ I have tested both HTML, CSS and Javascript for all pages and shown the results 
 ### HTML - My Portfolio
  - After running through [W3C validator](https://validator.w3.org/l). The following errors were shown . 
   <img src="assets/images/readme-images/testing-images/my-portfolio-test-html-val.jpg" alt="image of issues in html my portfolio page">
-  - 
+  - The error was due to type being shown in the script, this has now been removed.
   
 ### HTML - My Predictor 
-  After running through [W3C validator](https://validator.w3.org/).There were no errors found.
-
+  After running through [W3C validator](https://validator.w3.org/).The only issue that was found was a duplicate in class.
+<img src="assets/images/readme-images/testing-images/my-predictor-test-html-val.jpg" alt="image of issues in html my predicotr page">
+- The class was moved from the input to the table data
 
 
 ### CSS - 
-  - Only one error was found when running me style.css through the validator [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator) This error was caused due to typing being entered in the code rather than the terminal. This had now been removed completely as this code was not needed.
-<img src="assets/images/readme-images/test1-css.jpg" alt="image of issues in css">
+  - There were no errors when running through  [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator) 
 
 ### Responsiveness 
 - Using Google Dev Tools to test the website or a range of devices using the ipad and pixel2 as the main marker i was able to get most items responsives, to tidy up any elements I then used some media queries based on two different screen widths to fix any other issues.

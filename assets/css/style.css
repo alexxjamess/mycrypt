@@ -1,329 +1,321 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Tourney&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: hsl(0, 0%, 100%);
-    background-image: url("/assets/images/moon.jpeg");
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    max-width: 1200px;
-    margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+  background-image: url("/assets/images/moon.jpeg");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 1200px;
+  margin: auto;
 }
 
 main {
-    min-height: calc(100vh - 350px);
+  min-height: calc(100vh - 350px);
 }
 
 /* headings and logo */
 
-
-
 h2 {
-    font-family: "Tourney", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #76FFDD;
-    padding:20px
+  font-family: "Tourney", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #76ffdd;
+  padding: 20px;
 }
 
 #logo {
-    display: flex;
-    padding: 20px;
-    
+  display: flex;
+  padding: 20px;
 }
 #logo a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 3.5rem;
-    font-family: "Tourney", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 3.5rem;
+  font-family: "Tourney", sans-serif;
 }
 #nav-div {
-    display: flex;
-    padding-left: 50px;
-    align-items: center;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
 }
 #menu {
-    font-size: 100%;
-    letter-spacing: 2px;
-    display: flex;
+  font-size: 100%;
+  letter-spacing: 2px;
+  display: flex;
 }
 
 #menu li {
-    line-height: 40px;
+  line-height: 40px;
 }
 
 #menu li {
-    list-style-type: none;
-    margin-top: 25px;
-    margin-right: 30px;
+  list-style-type: none;
+  margin-top: 25px;
+  margin-right: 30px;
 }
 #menu a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 #menu a:hover {
-    border-bottom: 1px solid #76FFDD;
+  border-bottom: 1px solid #76ffdd;
 }
 .active {
-    border-bottom: 1px solid #76FFDD;
+  border-bottom: 1px solid #76ffdd;
 }
 /* Embedded Rolling Price */
 #rolling-price {
-background-color: #76FFDD; 
-box-sizing: border-box; 
-border: 1px solid #76FFDD; 
-border-radius: 4px; 
-margin-bottom: 40px; 
-width: 100%; 
-height:40px;
+  background-color: #76ffdd;
+  box-sizing: border-box;
+  border: 1px solid #76ffdd;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 40px;
 }
 
 /* Embedded bitcoin Price */
 
 #btc-chart {
-height:560px; 
-background-color: #76FFDD; 
-overflow:hidden; 
-box-sizing: border-box; 
-border: 1px solid #76FFDD; 
-border-radius: 4px; 
-width: 370px;
+  height: 560px;
+  background-color: #76ffdd;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #76ffdd;
+  border-radius: 4px;
+  width: 370px;
 }
 
 /*Home Page Main Body */
 
 #home-desc {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    }
-
-
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
 
 #btc-chart {
-    max-width: 400px;
+  max-width: 400px;
 }
 #home-main {
-    display: flex;
+  display: flex;
 }
 
 /* Home Page Buttons to Other Pages*/
 
-#portfolio-button, #predictor-button {
-    padding: 33px;
-    text-align: center;
+#portfolio-button,
+#predictor-button {
+  padding: 33px;
+  text-align: center;
 }
 
 .button-home {
-    text-align: center;
-    color: #000000;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    font-size: 110%;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #76FFDD;
-    padding: 15px 32px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  font-size: 110%;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #76ffdd;
+  padding: 15px 32px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-transform: uppercase;
 }
 
 .button-home:hover {
-    background-color: #00e9af;
-    color: #ffffff;
-    text-decoration: none;
+  background-color: #00e9af;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .button-home:active {
-    background-color: #76FFDD;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  background-color: #76ffdd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /*Footer*/
 
 footer {
-   
-    padding: 30px;
+  padding: 30px;
 }
 .copyright {
-    color: #ffffff;
-    text-align: right;
+  color: #ffffff;
+  text-align: right;
 }
 
 .social-networks {
-    text-align: right;
+  text-align: right;
 }
 .social-networks > li {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
 }
 
 .social-networks i {
-    font-size: 160%;
-    margin: 5%;
-    padding: 15%;
-    color: #76FFDD;
+  font-size: 160%;
+  margin: 5%;
+  padding: 15%;
+  color: #76ffdd;
 }
 
 /* my portfolio and my predictor table */
 
 #portfolio-main {
-    display: flex;
-    flex-direction: column;
-    }
-
-
-#portfolio-table, #predictor-table {
-    padding: 10px;
-    border: 2px solid #76FFDD;
-    margin: 30px;
-    display: flex;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    width: fit-content;
-    
-   
+  display: flex;
+  flex-direction: column;
 }
-table, th, td {
-    border: 1px solid #76FFDD;
-    text-align: center; 
+
+#portfolio-table,
+#predictor-table {
+  padding: 10px;
+  border: 2px solid #76ffdd;
+  margin: 30px;
+  display: flex;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  width: fit-content;
+}
+table,
+th,
+td {
+  border: 1px solid #76ffdd;
+  text-align: center;
 }
 
 #portfolio-table h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .form-input {
-    color: #ffffff;
-    margin: 5px 0 20px 0;
-    border: 2px solid #ffffff;
-    padding: 10px;
-    background-color: #000000;
-    
+  color: #ffffff;
+  margin: 5px 0 20px 0;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  background-color: #000000;
 }
 .form-input:hover {
-    border-color: #76FFDD;
+  border-color: #76ffdd;
 }
 
 .dollars:before {
-        content: "$";
+  content: "$";
 }
 
 /* For Buttons My Portfolio and My Predictor */
 
-#calculate-port, #calculate-pred {
-    text-align: center;
-    color: #000000;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #76FFDD;
-    padding: 15px 10px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-transform: uppercase;
-    width: 100px;
-    margin:10px
+#calculate-port,
+#calculate-pred {
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #76ffdd;
+  padding: 15px 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-transform: uppercase;
+  width: 100px;
+  margin: 10px;
 }
 
-#calculate-port, #calculate-pred:hover {
-    background-color: #00e9af;
+#calculate-port,
+#calculate-pred:hover {
+  background-color: #00e9af;
 }
 
-#calculate-port, #calculate-pred:active {
-    background-color: #76FFDD;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+#calculate-port,
+#calculate-pred:active {
+  background-color: #76ffdd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 #add-coin {
-    text-align: center;
-    color: #000000;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #76FFDD;
-    padding: 15px 15px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-transform: uppercase;
-    width: 100px;
-    margin: 10px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #76ffdd;
+  padding: 15px 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-transform: uppercase;
+  width: 100px;
+  margin: 10px;
 }
 
 #add-coin:hover {
-    background-color: #00e9af;
+  background-color: #00e9af;
 }
 
 #add-coin:active {
-    background-color: #76FFDD;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  background-color: #76ffdd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* For instructions both pages*/
 
 .instructions {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 /*Media Queries*/
 
 @media screen and (max-width: 1000px) {
-    #home-main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-
-    
+  #home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-    
 
 @media screen and (max-width: 450px) {
-    #home-main {
-        display: flex;
-        flex-direction: column;
-        margin: 40px;
-    }
-    #rolling-price iframe {
-        margin-left: 40px;
-        width: 342px;
-    }
-    
-    #nav-div {
-        padding-left: 0px;
-        font-size: 0.8rem;
-    }
-    #logo a {
-        font-size: 2.5rem;
-    }
-      
-    tr { display: block; 
-        float: left; }
-    th, td {
-        display: block;
-        min-height: 70px;
+  #home-main {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+  }
+  #rolling-price iframe {
+    margin-left: 40px;
+    width: 342px;
+  }
 
-     }
-     #portfolio-table, #predictor-table {
-        padding: 0px;
-        
-    }
-    
+  #nav-div {
+    padding-left: 0px;
+    font-size: 0.8rem;
+  }
+  #logo a {
+    font-size: 2.5rem;
+  }
+
+  tr {
+    display: block;
+    float: left;
+  }
+  th,
+  td {
+    display: block;
+    min-height: 70px;
+  }
+  #portfolio-table,
+  #predictor-table {
+    padding: 0px;
+  }
 }
