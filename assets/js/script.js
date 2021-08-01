@@ -1,3 +1,5 @@
+/**Event Listeners for buttons*/
+
 /**
  * This will find current price based on chosen item drop down list
  * this should be an API but couldnt get it to work
@@ -150,5 +152,5 @@
      const currentValuePredictor = document.getElementById('current-value-predictor').value
      const resultPercentageChange = ((futureValuePredictor - currentValuePredictor) / currentValuePredictor * 100);
      document.getElementById('percentage-change').innerHTML = resultPercentageChange;
-     console.log(result)
+     console.log(resultPercentageChange)
  }
