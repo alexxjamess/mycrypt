@@ -1,129 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name= "keywords" content="">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
     <title>MY PORTFOLIO | MY CRYPT</title>
 
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-            <!--Load the AJAX API-->
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <script type="text/javascript"></script>
-                     
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
     <header>
-        <div id="logo">
-        
-            <a href="index.html">MY CRYPT</a>
-        
-        
-        </div>
-        <div>
-        <nav id="nav-div" >
-            <ul id="menu"> 
-               
-                
-                
-                <li>
-                    <a href="my-portfolio.html" >MY PORTFOLIO</a>
-                </li>
-                <li>
-                    <a href="my-predictor.html" >MY PREDICTOR</a>
-                </li>  
-                
-                
-               
-            </ul>
+      <div id="logo">
+        <a href="index.html">MY CRYPT</a>
+      </div>
+      <div>
+        <nav id="nav-div">
+          <ul id="menu">
+            <li>
+              <a href="my-portfolio.html">MY PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="my-predictor.html">MY PREDICTOR</a>
+            </li>
+          </ul>
         </nav>
-        </div>
-        </header>
-        <main>
-            <section>
-                <!--Embedded Live Rolling Chart from url 'https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart' -->
-                <div>
-                    <iframe id="rolling-price" src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no" ></iframe>
-                </div>
-            </section>
-            <section>
-                <div id='portfolio-main'>
-                <div class="instructions">                
-                <h2>MY PORTFOLIO</h2>
-                <h3>How to Use</h3>
-                <p>
-                    <ul>
-                        <li>Choose Your Coin or Token</li>
-                        <li>Enter The Number of Coins/Tokens You Have</li>
-                        <li>Click Calculate to Work out Current Value and %</li>
-                        <li>Click Add Coin if you want to add more coins</li>
-                    </ul>
-                </p>
-                </div>
-                <div>
-                <table id='portfolio-table'>
-                    <tr>
-                        <th>Coin/Token</th>
-                        <th>Current Price</th>
-                        <th>No. Coins/Tokens</th>
-                        <th>Current Value</th>
-                        <th>% of Portfolio</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" oninput= "onCurrencySelect()" class="form-input" id="coin-token-port" name="coin-token" list="coins" >
-                            <datalist id="coins">
-                            <option value="bitcoin">BTC</option>
-                           <option value="ethereum">ETH</option>
-                           <option value="ripple">XRP</option>
-                           <option value="cardano">ADA</option>
-                           <option value="tether">USDT</option>
-                           <option value="dogecoin">DOGE</option>
-                       </datalist></td>
-                    <td id="current-price1" class ="dollars"></td>
-                    <td id="my-amount" ><input  required id="my-amount-input"  class="form-input" type="number"  min="0" name="my-amount"></td>
-                    <td id="current-value1" class ="dollars"></td>
-                    <td id="port-value"></td>
-                    </tr>
-                </table>
-                        
-                <div>
-                    <button id ="calculate-port" onclick="calculateCurrentValue()" value="calculate-port">Calculate</button>
-                    
-                    <button id ="add-coin" onclick="addCoin()" value="add-coin">Add Coin</button>
-            </div>
-            </div>
-            <div id="chart-div"></div>
-            
-            </section>
-            
+      </div>
+    </header>
+    <main>
+      <!--Embedded Live Rolling Chart from url 'https://coinlib.io/widgets?w_chart_coin_id=859&w_chart_pref_coin_id=1505&w_all_theme=Dark#w_chart' -->
+      <div>
+        <iframe id="rolling-price" src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no"></iframe>
+      </div>
 
-        </main>
-        <footer>
-            
-            
-            <ul class="social-networks">
-                <li>
-                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (Opens in a new tab)"><i class="fab fa-facebook-square"></i></a>
-                </li>
-                <li>
-                 <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (Opens in a new tab)"><i class="fab fa-twitter-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.reddit.com/" target="_blank" rel="noopener" aria-label="Visit our Reddit page (Opens in a new tab)"><i class="fab fa-reddit"></i></a>
-                </li>
+      <section>
+        <div id="portfolio-main">
+          <div class="instructions">
+            <h2>MY PORTFOLIO</h2>
+            <h3>How to Use</h3>
+            <ul>
+              <li>Choose Your Coin or Token</li>
+              <li>Enter The Number of Coins/Tokens You Have</li>
+              <li>Click Calculate to Work out Current Value and %</li>
+              <li>Click Add Coin if you want to add more coins</li>
             </ul>
-            
-            <p class="copyright">&copy;2021 MYCRYPT</p>
-       
-         </footer>
+          </div>
+          <div>
+            <table id="portfolio-table">
+              <tr>
+                <th>Coin/Token</th>
+                <th>Current Price</th>
+                <th>No. Coins/Tokens</th>
+                <th>Current Value</th>
+                <th>% of Portfolio</th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" oninput="onCurrencySelect()" class="form-input" id="coin-token-port" name="coin-token" list="coins" />
+                  <datalist id="coins">
+                    <option value="bitcoin">BTC</option>
+                    <option value="ethereum">ETH</option>
+                    <option value="ripple">XRP</option>
+                    <option value="cardano">ADA</option>
+                    <option value="tether">USDT</option>
+                    <option value="dogecoin">DOGE</option>
+                  </datalist>
+                </td>
+                <td id="current-price1" class="dollars"></td>
+                <td id="my-amount"><input required id="my-amount-input" class="form-input" type="number" min="0" name="my-amount" /></td>
+                <td id="current-value1" class="dollars"></td>
+                <td id="port-value"></td>
+              </tr>
+            </table>
 
-     <!-- font awesome script-->
-     <script src="https://kit.fontawesome.com/99b3f5e043.js" crossorigin="anonymous"></script>
-     <script src="/assets/js/script.js"></script>
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-     
-</body>
+            <div>
+              <button id="calculate-port" onclick="calculateCurrentValue()" value="calculate-port">Calculate</button>
+
+              <button id="add-coin" onclick="addCoin()" value="add-coin">Add Coin</button>
+            </div>
+          </div>
+
+          <div id="chart-div"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul class="social-networks">
+        <li>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (Opens in a new tab)"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (Opens in a new tab)"><i class="fab fa-twitter-square"></i></a>
+        </li>
+        <li>
+          <a href="https://www.reddit.com/" target="_blank" rel="noopener" aria-label="Visit our Reddit page (Opens in a new tab)"><i class="fab fa-reddit"></i></a>
+        </li>
+      </ul>
+
+      <p class="copyright">&copy;2021 MYCRYPT</p>
+    </footer>
+
+    <!-- font awesome script-->
+    <script src="https://kit.fontawesome.com/99b3f5e043.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </body>
+</html>
