@@ -67,10 +67,9 @@ I have tested both HTML, CSS and Javascript for all pages and shown the results 
 
 ### HTML - My Portfolio
  - After running through [W3C validator](https://validator.w3.org/l). The following errors were shown . 
-  <img src="assets/images/readme-images/test1-explore.jpg" alt="image of issues in html explore page">
-  - On test 2 all issuues were recitifed other than those shown below, the error states that there is nothing in the heading however there is a font awesome text item which the validator isnt recognising.  [W3C validator](https://validator.w3.org/l)
-  <img src="assets/images/readme-images/test2-explore.jpg" alt="image of remaining issues in html explore page">
-
+  <img src="assets/images/readme-images/testing-images/my-portfolio-test-html-val.jpg" alt="image of issues in html my portfolio page">
+  - 
+  
 ### HTML - My Predictor 
   After running through [W3C validator](https://validator.w3.org/).There were no errors found.
 
