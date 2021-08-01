@@ -61,7 +61,9 @@ I have tested both HTML, CSS and Javascript for all pages and shown the results 
 
 ### HTML - Index
   - After running through [W3C validator](vl). The index page had several errors regarding the widgets and iframes as a lot of the stlying was included in the HTML, this has been taken out and styled in CSS.
+  -The other error shown relates to a section not containg any identifying heading, this section just containted the embedded iframe. To resolve this I removed the section and placed the iframe in a div only.
 
+<img src="assets/images/readme-images/testing-images/index-test-html-val.jpg" alt="image of issues in html index page">
 
 ### HTML - My Portfolio
  - After running through [W3C validator](https://validator.w3.org/l). The following errors were shown . 
