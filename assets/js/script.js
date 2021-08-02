@@ -59,9 +59,21 @@
    let myAmount1 = x.insertCell(2);
    let currentValue1 = x.insertCell(3);
    let percPort1 = x.insertCell(4);
-   coinToken.innerHTML = document.getElementById("coins");
+   var coinInput = document.createElement('input');
+    coinInput.type = 'text';
+    coinInput.id = 'coin-list-1';
+    coinInput.list = 'coins';
+    coinInput.className = 'form-input';
+   var myCoins = document.createElement('input');
+    myCoins.type = 'number';
+    myCoins.id = 'my-amount-input1';
+    myCoins.className = 'form-input';
+    myCoins.min = '0';
+
+   
+   coinToken.innerHTML = coinInput;
    currentPrice1.innerHTML = "5";
-   myAmount1.innerHTML = document.getElementById("my-amount-input");
+   myAmount1.innerHTML = document.getElementById("my-amount-input").value;
    currentValue1.innerHTML = "=Current Price * My Amount";
    percPort1.innerHTML = "";
  }
@@ -80,7 +92,7 @@
    let percChange1 = x.insertCell(6);
    coinTokenPred.innerHTML = document.getElementById("coin-token-pred");
    currentPricePred.innerHTML = "5";
-   myAmountPred.innerHTML = document.getElementById("my-amount-input-pred");
+   myAmountPred.innerHTML = document.getElementById("my-amount-input-pred").value;
    currentValuePred.innerHTML = "No. of Coins/Tokens * Current Price";
    futurePrice1.innerHTML = document.getElementById("future-price-input");
    futureValue1.innerHTML = "=No of Coins/Tokens * Future Price";
@@ -105,7 +117,7 @@
    data.addColumn("string", "Coin/Token");
    data.addColumn("number", "Percentage");
    data.addRows([
-     [document.getElementById("coin-token"), document.getElementById("current-value1")],
+     [document.getElementById("coin-token").value, document.getElementById("current-value1")],
      ["XRP", 1],
      ["ADA", 1],
      ["ETH", 1],

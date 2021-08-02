@@ -183,8 +183,7 @@ footer {
   flex-direction: column;
 }
 
-#portfolio-table,
-#predictor-table {
+#portfolio-table, #predictor-table {
   padding: 10px;
   border: 2px solid #76ffdd;
   margin: 30px;
@@ -207,7 +206,7 @@ td {
   color: #ffffff;
   margin: 5px 0 20px 0;
   border: 2px solid #ffffff;
-  padding: 10px;
+  padding: 8px;
   background-color: #000000;
 }
 .form-input:hover {
@@ -220,8 +219,7 @@ td {
 
 /* For Buttons My Portfolio and My Predictor */
 
-#calculate-port,
-#calculate-pred {
+#calculate-port, #calculate-pred {
   text-align: center;
   color: #000000;
   text-decoration: none;
@@ -236,18 +234,24 @@ td {
   margin: 10px;
 }
 
-#calculate-port,
 #calculate-pred:hover {
   background-color: #00e9af;
 }
+#calculate-port:hover {
+  background-color: #00e9af;
+}
 
-#calculate-port,
+#calculate-port:active {
+  background-color: #76ffdd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 #calculate-pred:active {
   background-color: #76ffdd;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-#add-coin {
+#add-coin-pred {
   text-align: center;
   color: #000000;
   text-decoration: none;
@@ -262,11 +266,35 @@ td {
   margin: 10px;
 }
 
-#add-coin:hover {
+#add-coin-pred:hover {
   background-color: #00e9af;
 }
 
-#add-coin:active {
+#add-coin-pred:active {
+  background-color: #76ffdd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#add-coin-port {
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #76ffdd;
+  padding: 15px 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-transform: uppercase;
+  width: 100px;
+  margin: 10px;
+}
+
+#add-coin-port:hover {
+  background-color: #00e9af;
+}
+
+#add-coin-port:active {
   background-color: #76ffdd;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
