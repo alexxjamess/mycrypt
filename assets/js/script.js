@@ -30,17 +30,34 @@ async function onCurrencySelectPred() {
  }
 /**
  * If calculate button is clicked this will run a function
- * to calcualte current value by multipying current price and the users inputed amount
+ * to calcualte current total value of coin by multipying current price and the users inputed amount
+ * for my portfolio
  */
 function calculateTotalPortfolioValueForEachCoin() {
     const rows = document.getElementsByClassName("data-row");
     for (let idx = 0; idx < rows.length; idx++) {
         const currentPrice = document.getElementById(`current-price1-${idx}`);
         const coinCount = document.getElementById(`my-amount-input-${idx}`);
-        const totalCoinValue = parseFloat(currentPrice.value) * parseFloat(coinCount.value);
+        const totalCoinValue = parseFloat(currentPrice.innerText) * parseFloat(coinCount.value);
         document.getElementById(`current-value1-${idx}`).innerHTML = totalCoinValue;
     }
 }
+/**
+ * If calculate button is clicked this will run a function
+ * to calcualte current total value of coin by multipying current price and the users inputed amount
+ * for my portfolio
+ */
+ function calculateTotalPredictorValueForEachCoin() {
+  
+      const currentPricePred = document.getElementById(`current-price`);
+      const coinCountPred = document.getElementById(`my-amount-input-pred`);
+      const totalCoinValuePred = parseFloat(currentPricePred.innerText) * parseFloat(coinCountPred.value);
+      document.getElementById(`current-value-predictor`).innerHTML = totalCoinValuePred;
+  }
+
+
+
+
 function addCoin() {
     const currentRowCount = document.getElementsByClassName("data-row").length;
     // Append a new row to body
@@ -112,9 +129,9 @@ function calculateFutureValue() {
  * from current value to future value my predictor page
  */
 function calculatePercentageChange() {
-    const futureValuePredictor = document.getElementById("future-value").value;
-    const currentValuePredictor = document.getElementById("current-value-predictor").value;
-    const resultPercentageChange = ((futureValuePredictor - currentValuePredictor) / currentValuePredictor) * 100;
+    const futureValuePredictor = document.getElementById("future-value");
+    const currentValuePredictor = document.getElementById(`current-value-predictor`);
+    const resultPercentageChange = (parseFloat(futureValuePredictor.value) - parseFloat(currentValuePredictor.innerText))/ parseFloat(currentValuePredictor.innerText)* 100;
     document.getElementById("percentage-change").innerHTML = resultPercentageChange;
     console.log(resultPercentageChange);
 }

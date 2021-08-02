@@ -61,7 +61,7 @@
             </tr>
             <tr>
               <td>
-                <input type="text" onchange="onCurrencySelectPred()" class="form-input" id="coin-token-pred" name="coin-token" list="coins" />
+                <input type="text" onchange="onCurrencySelectPred()" placeholder="Select a Coin/Token" class="form-input" id="coin-token-pred" name="coin-token" list="coins" />
                 <datalist id="coins">
                   <option value="bitcoin">Bitcoin</option>
                   <option value="ethereum">Ethereum</option>
@@ -72,16 +72,16 @@
                 </datalist>
               </td>
               <td id="current-price" class="dollars"></td>
-              <td><input required class="form-input" type="number" id="my-amount-input-pred" name="my-amount" min="0" /></td>
+              <td><input required class="form-input" placeholder="Enter No of Coins/Tokens" type="number" id="my-amount-input-pred" name="my-amount" min="0" /></td>
               <td id="current-value-predictor" class="dollars"></td>
-              <td class="dollars"><input required class="form-input"  type="number" id="future-price-input" name="future-price" min="0" /></td>
+              <td class="dollars"><input required class="form-input" placeholder="Enter future Price" type="number" id="future-price-input" name="future-price" min="0" /></td>
               <td id="future-value" class="dollars"></td>
               <td id="percentage-change"></td>
             </tr>
           </table>
 
           <div>
-            <button id="calculate-pred" value="calculate-pred" onclick="calculateFutureValue();calculatePercentageChange();onCurrencySelectPred();">Calculate</button>
+            <button id="calculate-pred" value="calculate-pred" onclick="calculateFutureValue();calculatePercentageChange();calculateTotalPredictorValueForEachCoin();">Calculate</button>
             <button id="add-coin-port" onclick="addCoinPred" value="add-coin">Add Coin</button>
           </div>
         </div>
