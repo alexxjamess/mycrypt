@@ -64,7 +64,7 @@ function addCoinPortfolio() {
   const myPortfolioTable= document.getElementById("portfolio-table");
   // Append a new row to body
   let newRow = myPortfolioTable.insertRow(2);
-  newRow.className = "data-row";
+  newRow.className = "data-row-port";
       
     // Append column 1
     let coinToken = newRow.insertCell(0);
@@ -83,6 +83,38 @@ function addCoinPortfolio() {
     let coinPortfolioValue = newRow.insertCell(4);
 
 }
+/**
+ * function used to add row to my predictor table  
+ * inputting the same input fields as prevous row.
+ */
+function addCoinPred() {
+    const currentRowCountPred = document.getElementsByClassName("data-row-pred").length;
+    const myPredictorTable= document.getElementById("predictor-table");
+    // Append a new row to body
+    let newRowPred = myPredictorTable.insertRow(2);
+    newRowPred.className = "data-row-pred";
+        
+      // Append column 1
+      let coinTokenPred = newRowPred.insertCell(0);
+      coinTokenPred.innerHTML = `<input id="coin-token-pred-${currentRowCountPred + 1}" class="form-input"  placeholder="Select a Coin/Token" type="text" list="coins" oninput="onCurrencySelectPred(${currentRowCountPred + 1})"/>`;
+      // Append column 2
+      let coinCurrentPricePred = newRowPred.insertCell(1);
+      coinCurrentPricePred.className = "dollars current-total-value"
+      coinCurrentPricePred.id = `current-price-${currentRowCountPred + 1}`
+      // Append column 3
+      let tokenCountPred = newRowPred.insertCell(2);
+      tokenCountPred.innerHTML = `<input id="my-amount-input-pred-${currentRowCountPred + 1}" class="form-input" placeholder="Enter No of Coins/Tokens" type="number" min="0" />`;
+      // Append column 4
+      let totalValueCoinPred = newRowPred.insertCell(3);
+      totalValueCoinPred.className = "dollars"
+      // Append column 5
+      let coinFutureValue = newRowPred.insertCell(4);
+      // Append column 6
+      let coinFutureValueTotal = newRowPred.insertCell(5);
+      // Append column 7
+      let coinPercentageChange = newRowPred.insertCell(6);
+  
+  }
 /**
  * function used to calculate future value by 
  * multiplying future price inputted by user and no of coins inputted by user.

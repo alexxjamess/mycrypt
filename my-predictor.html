@@ -61,7 +61,7 @@
             </tr>
             <tr>
               <td>
-                <input type="text" onchange="onCurrencySelectPred()" placeholder="Select a Coin/Token" class="form-input" id="coin-token-pred" name="coin-token" list="coins" />
+                <input type="text" onchange="onCurrencySelectPred()" placeholder="Select a Coin/Token" class="form-input data-row-pred" id="coin-token-pred" name="coin-token" list="coins" />
                 <datalist id="coins">
                   <option value="bitcoin">Bitcoin</option>
                   <option value="ethereum">Ethereum</option>
@@ -71,12 +71,12 @@
                   <option value="dogecoin">Dogecoin</option>
                 </datalist>
               </td>
-              <td id="current-price" class="dollars"></td>
-              <td><input required class="form-input" placeholder="Enter No of Coins/Tokens" type="number" id="my-amount-input-pred" name="my-amount" min="0" /></td>
-              <td id="current-value-predictor" class="dollars"></td>
-              <td class="dollars"><input required class="form-input" placeholder="Enter future Price" type="number" id="future-price-input" name="future-price" min="0" /></td>
-              <td id="future-value" class="dollars"></td>
-              <td id="percentage-change"></td>
+              <td id="current-price" class="dollars data-row-pred"></td>
+              <td><input required class="form-input data-row-pred " placeholder="Enter No of Coins/Tokens" type="number" id="my-amount-input-pred" name="my-amount" min="0" /></td>
+              <td id="current-value-predictor" class="dollars data-row-pred"></td>
+              <td class="dollars"><input required class="form-input data-row-pred " placeholder="Enter future Price" type="number" id="future-price-input" name="future-price" min="0" /></td>
+              <td id="future-value" class="dollars data-row-pred"></td>
+              <td id="percentage-change" class="data-row-pred"></td>
             </tr>
           </table>
 

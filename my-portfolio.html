@@ -62,7 +62,7 @@
               </tr>
               <tr>
                 <td>
-                  <input type="text" placeholder="Select a Coin/Token" oninput="onCurrencySelect()" class="form-input data-row" id="coin-token-port" name="coin-token" list="coins" />
+                  <input type="text" placeholder="Select a Coin/Token" oninput="onCurrencySelect()" class="form-input data-row-port" id="coin-token-port" name="coin-token" list="coins" />
                   <datalist id="coins">
                     <option value="bitcoin">BTC</option>
                     <option value="ethereum">ETH</option>
@@ -72,10 +72,10 @@
                     <option value="dogecoin">DOGE</option>
                   </datalist>
                 </td>
-                <td id="current-price1" class="data-row dollars" ></td>
-                <td id="my-amount"><input required id="my-amount-input" placeholder="Enter No of Coins/Tokens" class="form-input data-row" type="number" min="0" name="my-amount" /></td>
-                <td id="current-value1" class="data-row dollars current-total-value" ></td>
-                <td id="port-value" class="data-row"></td>
+                <td id="current-price1" class="data-row-port dollars" ></td>
+                <td id="my-amount"><input required id="my-amount-input" placeholder="Enter No of Coins/Tokens" class="form-input data-row-port" type="number" min="0" name="my-amount" /></td>
+                <td id="current-value1" class="data-row-port dollars current-total-value" ></td>
+                <td id="port-value" class="data-row-port"></td>
               </tr>
             </table>
 
