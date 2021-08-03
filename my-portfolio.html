@@ -74,15 +74,15 @@
                 </td>
                 <td id="current-price1" class="data-row dollars" ></td>
                 <td id="my-amount"><input required id="my-amount-input" placeholder="Enter No of Coins/Tokens" class="form-input data-row" type="number" min="0" name="my-amount" /></td>
-                <td id="current-value1" class="data-row dollars" ></td>
+                <td id="current-value1" class="data-row dollars current-total-value" ></td>
                 <td id="port-value" class="data-row"></td>
               </tr>
             </table>
 
             <div>
-              <button id="calculate-port" onclick="calculateTotalPortfolioValueForEachCoin()" value="calculate-port">Calculate</button>
+              <button id="calculate-port" onclick="calculateTotalPortfolioValueForEachCoin();drawChart()" value="calculate-port">Calculate</button>
 
-              <button id="add-coin-pred" onclick="addCoin()" value="add-coin">Add Coin</button>
+              <button id="add-coin-pred" onclick="addCoinPortfolio()" value="add-coin">Add Coin</button>
             </div>
           </div>
 

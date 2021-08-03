@@ -54,29 +54,64 @@ function calculateTotalPortfolioValueForEachCoin() {
       const totalCoinValuePred = parseFloat(currentPricePred.innerText) * parseFloat(coinCountPred.value);
       document.getElementById(`current-value-predictor`).innerHTML = totalCoinValuePred;
   }
+/**
+ * function used to add row to my portfolio table  
+ * inputting the same input fields as prevous row.
+ */
 
-
-
-
-function addCoin() {
-    const currentRowCount = document.getElementsByClassName("data-row").length;
-    // Append a new row to body
-    let newRow = document.getElementById("my-portfolio-table-body").insertRow(currentRowCount + 1);
-    newRow.className = "data-row";
+function addCoinPortfolio() {
+  const currentRowCount = document.getElementsByClassName("data-row").length;
+  const myPortfolioTable= document.getElementById("portfolio-table");
+  // Append a new row to body
+  let newRow = myPortfolioTable.insertRow(2);
+  newRow.className = "data-row";
+      
     // Append column 1
     let coinToken = newRow.insertCell(0);
-    coinToken.innerHTML = `<input id="coin-list-${currentRowCount + 1}" class="form-input" type="text" list="coins" oninput="onCurrencySelect(${currentRowCount + 1})"/>`;
+    coinToken.innerHTML = `<input id="coin-token-port-${currentRowCount + 1}" class="form-input"  placeholder="Select a Coin/Token" type="text" list="coins" oninput="onCurrencySelect(${currentRowCount + 1})"/>`;
     // Append column 2
-    newRow.insertCell(1);
+    let coinCurrentPrice = newRow.insertCell(1);
+    coinCurrentPrice.className = "dollars current-total-value"
+    coinCurrentPrice.id = `current-price1-${currentRowCount + 1}`
     // Append column 3
     let tokenCount = newRow.insertCell(2);
-    tokenCount.innerHTML = `<input id="my-amount-input-${currentRowCount + 1}" class="form-input" type="number" min="0" />`;
+    tokenCount.innerHTML = `<input id="my-amount-input-${currentRowCount + 1}" class="form-input" placeholder="Enter No of Coins/Tokens" type="number" min="0" />`;
     // Append column 4
-    newRow.insertCell(3);
-    // Append column 5
-    newRow.insertCell(4);
-}
+    let totalValueCoin = newRow.insertCell(3);
+    totalValueCoin.className = "dollars"
+       // Append column 5
+    let coinPortfolioValue = newRow.insertCell(4);
 
+}
+/**
+ * function used to calculate future value by 
+ * multiplying future price inputted by user and no of coins inputted by user.
+ */
+
+function calculateFutureValue() {
+    const futurePricePred = document.getElementById("future-price-input").value;
+    const myAmountPred = document.getElementById("my-amount-input-pred").value;
+    const resultFutureValue = futurePricePred * myAmountPred;
+    document.getElementById("future-value").innerHTML = resultFutureValue;
+}
+/**
+ * function used to calculate percentage change
+ * from current value to future value my predictor page
+ */
+function calculatePercentageChange() {
+    const futureValuePredictor = document.getElementById("future-value");
+    const currentValuePredictor = document.getElementById('current-value-predictor');
+    const resultPercentageChange = parseFloat(futureValuePredictor.value) - parseFloat(currentValuePredictor.innerText);
+    document.getElementById("percentage-change").innerHTML = resultPercentageChange;
+    console.log(resultPercentageChange);
+}
+/**
+ * function used to calculate portfolio percentage 
+ *  Sum of Current Value Per Coin  /Number of Rows
+ */
+function calcualtePortfolioPercentagePerCoin() {
+    const portfolioPercentage = 1
+}
 /**
  * Function to draw chart of portfolio
  * used from Google Charts
@@ -118,20 +153,3 @@ function drawChart() {
  * Function to calculate the future value of coin/token
  * Users input of Number of Coins * User Input of Future Value
  */
-function calculateFutureValue() {
-    const futurePricePred = document.getElementById("future-price-input").value;
-    const myAmountPred = document.getElementById("my-amount-input-pred").value;
-    const resultFutureValue = futurePricePred * myAmountPred;
-    document.getElementById("future-value").innerHTML = resultFutureValue;
-}
-/**
- * function used to calculate percentage change
- * from current value to future value my predictor page
- */
-function calculatePercentageChange() {
-    const futureValuePredictor = document.getElementById("future-value");
-    const currentValuePredictor = document.getElementById(`current-value-predictor`);
-    const resultPercentageChange = (parseFloat(futureValuePredictor.value) - parseFloat(currentValuePredictor.innerText))/ parseFloat(currentValuePredictor.innerText)* 100;
-    document.getElementById("percentage-change").innerHTML = resultPercentageChange;
-    console.log(resultPercentageChange);
-}
