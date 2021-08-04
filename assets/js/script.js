@@ -35,8 +35,8 @@ async function onCurrencySelectPred(rowNo) {
  * for my portfolio
  */
 function calculateTotalPortfolioValueForEachCoin() {
-    const rows = document.getElementsByClassName("data-row-port");
-    for (let idx = 1; idx <= rows.length; idx++) {
+    const rowPort = document.getElementsByClassName("data-row-port");
+    for (let idx = 1; idx <= rowPort.length; idx++) {
         const currentPrice = document.getElementById(`current-price-${idx}`).innerText;
         const coinCount = document.getElementById(`my-amount-input-${idx}`).value;
         const totalCoinValue = parseFloat(currentPrice) * parseFloat(coinCount);
@@ -49,12 +49,11 @@ function calculateTotalPortfolioValueForEachCoin() {
  * for my portfolio
  */
  function calculateTotalPredictorValueForEachCoin() {
-    const rows = document.getElementsByClassName("data-row-pred");
-    for (let idx = 1; idx <= rows.length; idx++) {
-
-      const currentPricePred = document.getElementById(`current-price-pred-${idx}`);
-      const coinCountPred = document.getElementById(`my-amount-input-pred-${idx}`);
-      const totalCoinValuePred = parseFloat(currentPricePred.innerText) * parseFloat(coinCountPred.value);
+    const rowPred = document.getElementsByClassName("data-row");
+    for (let idx =1; idx <= rowPred.length; idx++) {
+      const currentPricePred = document.getElementById(`current-price-pred-${idx}`).innerText;
+      const coinCountPred = document.getElementById(`my-amount-input-pred-${idx}`).value;
+      const totalCoinValuePred = parseFloat(currentPricePred) * parseFloat(coinCountPred);
       document.getElementById(`current-value-predictor-${idx}`).innerHTML = totalCoinValuePred;
   }
 
@@ -92,18 +91,18 @@ function addCoinPortfolio() {
     coinToken.innerHTML = `<input id="coin-token-port-${currentRowCount}" class="form-input"  placeholder="Select a Coin/Token" type="text" list="coins" oninput="onCurrencySelect(${currentRowCount})"/>`;
     // Append column 2
     let coinCurrentPrice = newRow.insertCell(1);
-    coinCurrentPrice.className = "dollars current-total-value"
-    coinCurrentPrice.id = `current-price-${currentRowCount}`
+    coinCurrentPrice.className = "dollars current-total-value";
+    coinCurrentPrice.id = `current-price-${currentRowCount}`;
     // Append column 3
     let tokenCount = newRow.insertCell(2);
     tokenCount.innerHTML = `<input id="my-amount-input-${currentRowCount}" class="form-input" placeholder="Enter No of Coins/Tokens" type="number" min="0" />`;
     // Append column 4
     let totalValueCoin = newRow.insertCell(3);
-    totalValueCoin.className = "dollars"
-    totalValueCoin.id = `current-value-${currentRowCount}`
+    totalValueCoin.className = "dollars";
+    totalValueCoin.id = `current-value-${currentRowCount}`;
        // Append column 5
     let coinPortfolioValue = newRow.insertCell(4);
-    coinPortfolioValue.id = `port-value-${currentRowCount}`
+    coinPortfolioValue.id = `port-value-${currentRowCount}`;
 
 }
 /**
@@ -126,7 +125,7 @@ function addCoinPred() {
       coinCurrentPricePred.id = `current-price-pred-${currentRowCountPred}`;
       // Append column 3
       let tokenCountPred = newRowPred.insertCell(2);
-      tokenCountPred.innerHTML = `<input id="my-amount-input-pred-${currentRowCountPred }" class="form-input" placeholder="Enter No of Coins/Tokens" type="number" min="0" />`;
+      tokenCountPred.innerHTML = `<input id="my-amount-input-pred-${currentRowCountPred}" class="form-input" placeholder="Enter No of Coins/Tokens" type="number" min="0" />`;
       // Append column 4
       let totalValueCoinPred = newRowPred.insertCell(3);
       totalValueCoinPred.className = "dollars";
@@ -152,12 +151,12 @@ function addCoinPred() {
 
 function calculateFutureValue() {
     const rows = document.getElementsByClassName("data-row-pred");
-    for (let idx = 1; idx <= rows.length; idx++) {
+    for (let idz = 1; idz <= rows.length; idz++) {
         
-    const futurePricePred = document.getElementById(`future-price-input-${idx}`).value;
-    const myAmountPred = document.getElementById(`my-amount-input-pred-${idx}`).value;
-    const resultFutureValue = futurePricePred * myAmountPred;
-    document.getElementById(`future-value-${idx}`).innerHTML = resultFutureValue;
+    const futurePricePred = document.getElementById(`future-price-input-${idz}`).value;
+    const myAmountPred = document.getElementById(`my-amount-input-pred-${idz}`).value;
+    const totalFutureValue = parseFloat(futurePricePred) * parseFloat(myAmountPred);
+    document.getElementById(`future-value-${idz}`).innerHTML = totalFutureValue;
     }
 }
 
