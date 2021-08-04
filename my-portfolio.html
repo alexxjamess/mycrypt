@@ -13,7 +13,7 @@
 
     <!--Load the AJAX API-->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-    
+
   </head>
   <body>
     <header>
@@ -60,9 +60,9 @@
                 <th>Current Value</th>
                 <th>% of Portfolio</th>
               </tr>
-              <tr>
+              <tr class="data-row">
                 <td>
-                  <input type="text" placeholder="Select a Coin/Token" oninput="onCurrencySelect()" class="form-input data-row-port" id="coin-token-port" name="coin-token" list="coins" />
+                  <input type="text" placeholder="Select a Coin/Token" oninput="onCurrencySelect(1)" class="form-input data-row-port" id="coin-token-port-1" name="coin-token" list="coins" />
                   <datalist id="coins">
                     <option value="bitcoin">BTC</option>
                     <option value="ethereum">ETH</option>
@@ -72,15 +72,15 @@
                     <option value="dogecoin">DOGE</option>
                   </datalist>
                 </td>
-                <td id="current-price1" class="data-row-port dollars" ></td>
-                <td id="my-amount"><input required id="my-amount-input" placeholder="Enter No of Coins/Tokens" class="form-input data-row-port" type="number" min="0" name="my-amount" /></td>
-                <td id="current-value1" class="data-row-port dollars current-total-value" ></td>
-                <td id="port-value" class="data-row-port"></td>
+                <td id="current-price-1" class="data-row-port dollars" ></td>
+                <td><input required id="my-amount-input-1" placeholder="Enter No of Coins/Tokens" class="form-input data-row-port" type="number" min="0" name="my-amount" /></td>
+                <td id="current-value-1" class="data-row-port dollars current-total-value" ></td>
+                <td id="port-value-1" class="data-row-port"></td>
               </tr>
             </table>
 
             <div>
-              <button id="calculate-port" onclick="calculateTotalPortfolioValueForEachCoin(),drawChart()" value="calculate-port">Calculate</button>
+              <button id="calculate-port" onclick="calculateTotalPortfolioValueForEachCoin()" value="calculate-port">Calculate</button>
 
               <button id="add-coin-pred" onclick="addCoinPortfolio()" value="add-coin">Add Coin</button>
             </div>
