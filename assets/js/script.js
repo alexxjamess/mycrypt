@@ -25,8 +25,8 @@ async function onCurrencySelect(rowNo) {
 }
 
 async function onCurrencySelectPred(rowNo) {
-     const currency = document.getElementById(`coin-token-pred-${rowNo}`).value;
-     const currentPrice = await getCurrentPriceForCoin(currency);
+     const selectedCoin = document.getElementById(`coin-token-pred-${rowNo}`).value;
+     const currentPrice = await getCurrentPriceForCoin(selectedCoin);
      document.getElementById(`current-price-pred-${rowNo}`).innerHTML = currentPrice;
  }
 /**
@@ -41,20 +41,33 @@ function calculateTotalPortfolioValueForEachCoin() {
         const coinCount = document.getElementById(`my-amount-input-${idx}`).value;
         const totalCoinValue = parseFloat(currentPrice) * parseFloat(coinCount);
         document.getElementById(`current-value-${idx}`).innerHTML = totalCoinValue;
+     
     }
 }
 /**
  * If calculate button is clicked this will run a function
  * to calcualte current total value of coin by multipying current price and the users inputed amount
  * for my portfolio
+ * to calcualte future total value of coin by multipying future price inputted by user and the users inputed amount
+ * to calcualte percentage change of coin taking the difference of the current and future value/ current value *100
  */
  function calculateTotalPredictorValueForEachCoin() {
-    const rowPred = document.getElementsByClassName("data-row");
-    for (let idx =1; idx <= rowPred.length; idx++) {
+    const rowPred = document.getElementsByClassName("data-row-pred");
+    for (let idx = 1; idx <= rowPred.length; idx++) {
       const currentPricePred = document.getElementById(`current-price-pred-${idx}`).innerText;
       const coinCountPred = document.getElementById(`my-amount-input-pred-${idx}`).value;
       const totalCoinValuePred = parseFloat(currentPricePred) * parseFloat(coinCountPred);
-      document.getElementById(`current-value-predictor-${idx}`).innerHTML = totalCoinValuePred;
+      document.getElementById(`current-value-predictor-${idx}`).innerHTML = totalCoinValuePred;  
+      // Future Total Value  
+      const futurePricePred = document.getElementById(`future-price-input-${idx}`).value;
+      const myAmountPred = document.getElementById(`my-amount-input-pred-${idx}`).value;
+      const totalFutureValue = parseFloat(futurePricePred) * parseFloat(myAmountPred);
+      document.getElementById(`future-value-${idx}`).innerHTML = totalFutureValue;
+      //Percentage Change
+      const futureValuePredictor = document.getElementById(`future-value-${idx}`).innerHTML;
+      const currentValuePredictor = document.getElementById(`current-value-predictor-${idx}`).innerHTML;
+      const resultPercentageChange = (parseFloat(futureValuePredictor) - parseFloat(currentValuePredictor)) / parseFloat(currentValuePredictor)*100;
+      document.getElementById(`percentage-change-${idx}`).innerHTML = resultPercentageChange;
   }
 
 }
@@ -144,34 +157,9 @@ function addCoinPred() {
 
 
   }
-/**
- * function used to calculate future value by
- * multiplying future price inputted by user and no of coins inputted by user.
- */
 
-function calculateFutureValue() {
-    const rows = document.getElementsByClassName("data-row-pred");
-    for (let idz = 1; idz <= rows.length; idz++) {
-        
-    const futurePricePred = document.getElementById(`future-price-input-${idz}`).value;
-    const myAmountPred = document.getElementById(`my-amount-input-pred-${idz}`).value;
-    const totalFutureValue = parseFloat(futurePricePred) * parseFloat(myAmountPred);
-    document.getElementById(`future-value-${idz}`).innerHTML = totalFutureValue;
-    }
-}
+   
 
-
-/**
- * function used to calculate percentage change
- * from current value to future value my predictor page
- */
-function calculatePercentageChange() {
-    const futureValuePredictor = document.getElementById("future-value");
-    const currentValuePredictor = document.getElementById('current-value-predictor');
-    const resultPercentageChange = parseFloat(futureValuePredictor.value) - parseFloat(currentValuePredictor.innerText);
-    document.getElementById("percentage-change").innerHTML = resultPercentageChange;
-    console.log(resultPercentageChange);
-}
 /**
  * function used to calculate portfolio percentage
  *  Sum of Current Value Per Coin  /Number of Rows
@@ -218,3 +206,8 @@ function drawChart() {
     chart.draw(data, options);
 }
 */
+function runFunctionsCalculateButtonPredictor() {
+calculateTotalPredictorValueForEachCoin();
+calculateFutureValue();
+calculatePercentageChange();
+}
