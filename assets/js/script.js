@@ -60,7 +60,7 @@ function calculateTotalPortfolioValueForEachCoin() {
  */
 
 function addCoinPortfolio() {
-  const currentRowCount = document.getElementsByClassName("data-row").length;
+  const currentRowCount = document.getElementById("portfolio-table").rows.length;
   const myPortfolioTable= document.getElementById("portfolio-table");
   // Append a new row to body
   let newRow = myPortfolioTable.insertRow(2);
@@ -88,7 +88,7 @@ function addCoinPortfolio() {
  * inputting the same input fields as prevous row.
  */
 function addCoinPred() {
-    const currentRowCountPred = document.getElementsByClassName("data-row-pred").length;
+    const currentRowCountPred = document.getElementById("predictor-table").rows.length;
     const myPredictorTable= document.getElementById("predictor-table");
     // Append a new row to body
     let newRowPred = myPredictorTable.insertRow(2);
@@ -114,9 +114,11 @@ function addCoinPred() {
       // Append column 6
       let coinFutureValueTotal = newRowPred.insertCell(5);
       coinFutureValueTotal.className = "dollars";
+      coinFutureValueTotal.id =`future-value-${currentRowCountPred + 1}`
       // Append column 7
       let coinPercentageChange = newRowPred.insertCell(6);
-      coinPercentageChange.id = "coin-percentage-chain";
+      coinPercentageChange.id = `coin-percentage-chain-${currentRowCountPred + 1}`;
+
   
   }
 /**
@@ -151,7 +153,7 @@ function calcualtePortfolioPercentagePerCoin() {
 /**
  * Function to draw chart of portfolio
  * used from Google Charts
- 
+*/ 
 // Load the Visualization API and the corechart package.
 google.charts.load("current", {
     packages: ["corechart"],
@@ -167,11 +169,11 @@ function drawChart() {
     data.addColumn("string", "Coin/Token");
     data.addColumn("number", "Percentage");
     data.addRows([
-        [document.getElementById("coin-token").value, document.getElementById("current-value1")],
-        ["XRP", 1],
-        ["ADA", 1],
-        ["ETH", 1],
-        ["DOGE", 2],
+        [document.getElementById(`coin-token-port-${0}`).value, document.getElementById(`current-value1-${1}`)],
+        [document.getElementById(`coin-token-port-${1}`).value, document.getElementById(`current-value1"${2}`)],
+        [document.getElementById(`coin-token-port-${2}`).value, document.getElementById(`current-value1"${3}`)],
+        [document.getElementById(`coin-token-port-${3}`).value, document.getElementById(`current-value1"${4}`)],
+        [document.getElementById(`coin-token-port-${4}`).value, document.getElementById(`current-value1"${5}`)],
     ]);
     // Set chart options
     let options = {
@@ -184,8 +186,5 @@ function drawChart() {
     // Instantiate and draw our chart, passing in some options.
     let chart = new google.visualization.PieChart(document.getElementById("chart-div"));
     chart.draw(data, options);
-}*/
-/**
- * Function to calculate the future value of coin/token
- * Users input of Number of Coins * User Input of Future Value
- */
+}
+
