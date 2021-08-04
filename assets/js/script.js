@@ -41,9 +41,20 @@ function calculateTotalPortfolioValueForEachCoin() {
         const coinCount = document.getElementById(`my-amount-input-${idx}`).value;
         const totalCoinValue = parseFloat(currentPrice) * parseFloat(coinCount);
         document.getElementById(`current-value-${idx}`).innerHTML = totalCoinValue;
-     
+        var table = document.getElementById("portfolio-table"),
+        sumTotalValue = 0;
+        for (var i = 1; i < table.rows.length; i++) {
+        sumTotalValue = sumTotalValue + parseFloat(table.rows[i].cells[3].innerHTML);
+        const portfolioPercentage = totalCoinValue / sumTotalValue * 100
+        document.getElementById(`port-value-${idx}`).innerHTML = parseFloat(portfolioPercentage).toFixed(2)
+}
+
     }
 }
+     /**
+ * function used to calculate portfolio percentage
+ *  Sum of Current Value Per Coin  / Sum of Current Value
+*/
 /**
  * If calculate button is clicked this will run a function
  * to calcualte current total value of coin by multipying current price and the users inputed amount
@@ -75,23 +86,7 @@ function calculateTotalPortfolioValueForEachCoin() {
  * function used to add row to my portfolio table
  * inputting the same input fields as prevous row.
  */
-//  <tr class="data-row">
-//  <td>
-//    <input type="text" placeholder="Select a Coin/Token" oninput="onCurrencySelect(1)" class="form-input data-row-port" id="coin-token-port-1" name="coin-token" list="coins" />
-//    <datalist id="coins">
-//      <option value="bitcoin">BTC</option>
-//      <option value="ethereum">ETH</option>
-//      <option value="ripple">XRP</option>
-//      <option value="cardano">ADA</option>
-//      <option value="tether">USDT</option>
-//      <option value="dogecoin">DOGE</option>
-//    </datalist>
-//  </td>
-//  <td id="current-price-1" class="data-row-port dollars" ></td>
-//  <td><input required id="my-amount-input-1" placeholder="Enter No of Coins/Tokens" class="form-input data-row-port" type="number" min="0" name="my-amount" /></td>
-//  <td id="current-value-1" class="data-row-port dollars current-total-value" ></td>
-//  <td id="port-value-1" class="data-row-port"></td>
-// </tr>
+
 function addCoinPortfolio() {
   const currentRowCount = document.getElementById("portfolio-table").rows.length;
   const myPortfolioTable= document.getElementById("portfolio-table");
@@ -116,6 +111,7 @@ function addCoinPortfolio() {
        // Append column 5
     let coinPortfolioValue = newRow.insertCell(4);
     coinPortfolioValue.id = `port-value-${currentRowCount}`;
+    coinPortfolioValue.className ="percentage"
 
 }
 /**
@@ -161,13 +157,7 @@ function addCoinPred() {
 
    
 
-/**
- * function used to calculate portfolio percentage
- *  Sum of Current Value Per Coin  /Number of Rows
- */
-function calcualtePortfolioPercentagePerCoin() {
-    const portfolioPercentage = 1
-}
+
 /**
  * Function to draw chart of portfolio
  * used from Google Charts
@@ -207,8 +197,5 @@ function drawChart() {
     chart.draw(data, options);
 }
 */
-function runFunctionsCalculateButtonPredictor() {
-calculateTotalPredictorValueForEachCoin();
-calculateFutureValue();
-calculatePercentageChange();
-}
+
+
