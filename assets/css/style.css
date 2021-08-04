@@ -218,7 +218,9 @@ td {
 .dollars:before {
   content: "$";
 }
-
+.percentage:after {
+  content: "%";
+}
 /* For Buttons My Portfolio and My Predictor */
 
 #calculate-port, #calculate-pred {

@@ -67,7 +67,7 @@ function calculateTotalPortfolioValueForEachCoin() {
       const futureValuePredictor = document.getElementById(`future-value-${idx}`).innerHTML;
       const currentValuePredictor = document.getElementById(`current-value-predictor-${idx}`).innerHTML;
       const resultPercentageChange = (parseFloat(futureValuePredictor) - parseFloat(currentValuePredictor)) / parseFloat(currentValuePredictor)*100;
-      document.getElementById(`percentage-change-${idx}`).innerHTML = resultPercentageChange;
+      document.getElementById(`percentage-change-${idx}`).innerHTML = resultPercentageChange.toFixed(2);
   }
 
 }
@@ -154,6 +154,7 @@ function addCoinPred() {
       // Append column 7
       let coinPercentageChange = newRowPred.insertCell(6);
       coinPercentageChange.id = `percentage-change-${currentRowCountPred}`;
+      coinPercentageChange.className ="percentage"
 
 
   }
