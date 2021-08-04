@@ -71,18 +71,18 @@
                   <option value="dogecoin">Dogecoin</option>
                 </datalist>
               </td>
-              <td id="current-price" class="dollars data-row-pred"></td>
-              <td><input required class="form-input data-row-pred " placeholder="Enter No of Coins/Tokens" type="number" id="my-amount-input-pred" name="my-amount" min="0" /></td>
-              <td id="current-value-predictor" class="dollars data-row-pred"></td>
-              <td class="dollars"><input required class="form-input data-row-pred " placeholder="Enter future Price" type="number" id="future-price-input" name="future-price" min="0" /></td>
-              <td id="future-value" class="dollars data-row-pred"></td>
+              <td id="current-price" class="data-row-pred dollars "></td>
+              <td><input required class="data-row-pred form-input  " placeholder="Enter No of Coins/Tokens" type="number" id="my-amount-input-pred" name="my-amount" min="0" /></td>
+              <td id="current-value-predictor" class="data-row-pred dollars "></td>
+              <td class="dollars"><input required class="data-row-pred form-input " placeholder="Enter future Price" type="number" id="future-price-input" name="future-price" min="0" /></td>
+              <td id="future-value" class="data-row-pred dollars "></td>
               <td id="percentage-change" class="data-row-pred"></td>
             </tr>
           </table>
 
           <div>
             <button id="calculate-pred" value="calculate-pred" onclick="calculateFutureValue();calculatePercentageChange();calculateTotalPredictorValueForEachCoin();">Calculate</button>
-            <button id="add-coin-port" onclick="addCoinPred" value="add-coin">Add Coin</button>
+            <button id="add-coin-port" onclick="addCoinPred()" value="add-coin">Add Coin</button>
           </div>
         </div>
       </section>

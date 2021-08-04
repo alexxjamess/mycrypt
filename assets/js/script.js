@@ -92,27 +92,31 @@ function addCoinPred() {
     const myPredictorTable= document.getElementById("predictor-table");
     // Append a new row to body
     let newRowPred = myPredictorTable.insertRow(2);
-    newRowPred.className = "data-row-pred";
+    newRowPred.className = "data-row-pred-new";
         
       // Append column 1
       let coinTokenPred = newRowPred.insertCell(0);
       coinTokenPred.innerHTML = `<input id="coin-token-pred-${currentRowCountPred + 1}" class="form-input"  placeholder="Select a Coin/Token" type="text" list="coins" oninput="onCurrencySelectPred(${currentRowCountPred + 1})"/>`;
       // Append column 2
       let coinCurrentPricePred = newRowPred.insertCell(1);
-      coinCurrentPricePred.className = "dollars current-total-value"
-      coinCurrentPricePred.id = `current-price-${currentRowCountPred + 1}`
+      coinCurrentPricePred.className = "dollars current-total-value";
+      coinCurrentPricePred.id = `current-price-${currentRowCountPred + 1}`;
       // Append column 3
       let tokenCountPred = newRowPred.insertCell(2);
       tokenCountPred.innerHTML = `<input id="my-amount-input-pred-${currentRowCountPred + 1}" class="form-input" placeholder="Enter No of Coins/Tokens" type="number" min="0" />`;
       // Append column 4
       let totalValueCoinPred = newRowPred.insertCell(3);
-      totalValueCoinPred.className = "dollars"
+      totalValueCoinPred.className = "dollars";
       // Append column 5
       let coinFutureValue = newRowPred.insertCell(4);
+      coinFutureValue.className = "dollars";
+      coinFutureValue.innerHTML = `<input id="future-price-input-${currentRowCountPred + 1}" class="form-input" placeholder="Enter future Price" type="number" min="0" />`;
       // Append column 6
       let coinFutureValueTotal = newRowPred.insertCell(5);
+      coinFutureValueTotal.className = "dollars";
       // Append column 7
       let coinPercentageChange = newRowPred.insertCell(6);
+      coinPercentageChange.id = "coin-percentage-chain";
   
   }
 /**
