@@ -65,10 +65,10 @@ A user would come to the website if they wanted to evaluate their current portfo
 
 ## Features Left to Implement
 
-- Future developments of the website could include; Adding more coins/tokens to the website so that peoples portfilios can be more accurately portrayed.
 - The website could also evolve to allow user to create an account to store their portfolios and see up to date information.
 
 - add validation to choice of currency alert if not found 
+- add a delete row button 
 
 
 

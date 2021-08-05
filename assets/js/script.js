@@ -41,6 +41,10 @@ function calculateTotalPortfolioValueForEachCoin() {
         const coinCount = document.getElementById(`my-amount-input-${idx}`).value;
         const totalCoinValue = parseFloat(currentPrice) * parseFloat(coinCount);
         document.getElementById(`current-value-${idx}`).innerHTML = totalCoinValue;
+         /**
+        * function used to calculate portfolio percentage
+        *  Sum of Current Value Per Coin  / Sum of Current Value
+        */
         var table = document.getElementById("portfolio-table"),
         sumTotalValue = 0;
         for (var i = 1; i < table.rows.length; i++) {
@@ -51,10 +55,7 @@ function calculateTotalPortfolioValueForEachCoin() {
 
     }
 }
-     /**
- * function used to calculate portfolio percentage
- *  Sum of Current Value Per Coin  / Sum of Current Value
-*/
+
 /**
  * If calculate button is clicked this will run a function
  * to calcualte current total value of coin by multipying current price and the users inputed amount
@@ -155,47 +156,9 @@ function addCoinPred() {
 
   }
 
+
    
 
 
-/**
- * Function to draw chart of portfolio
- * used from Google Charts
-
-// Load the Visualization API and the corechart package.
-google.charts.load("current", {
-    packages: ["corechart"],
-});
-/**
-// Set a callback to run when the Google Visualization API is loaded.
-// google.charts.setOnLoadCallback(drawChart);
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawChart() {
-    // Create the data table.
-    let data = new google.visualization.DataTable();
-    data.addColumn("string", "Coin/Token");
-    data.addColumn("number", "Percentage");
-    data.addRows([
-        [document.getElementById(`coin-token-port-${0}`).value, document.getElementById(`current-value-${1}`)],
-        [document.getElementById(`coin-token-port-${1}`).value, document.getElementById(`current-value"${2}`)],
-        [document.getElementById(`coin-token-port-${2}`).value, document.getElementById(`current-value"${3}`)],
-        [document.getElementById(`coin-token-port-${3}`).value, document.getElementById(`current-value"${4}`)],
-        [document.getElementById(`coin-token-port-${4}`).value, document.getElementById(`current-value"${5}`)],
-    ]);
-    // Set chart options
-    let options = {
-        title: "My Portfolio",
-        is3D: true,
-        colors: ["#76ffdd", "#5eccb1", "#479985", "#2f6658", "#18332c"],
-        width: 500,
-        height: 400,
-    };
-    // Instantiate and draw our chart, passing in some options.
-    let chart = new google.visualization.PieChart(document.getElementById("chart-div"));
-    chart.draw(data, options);
-}
-*/
 
 
