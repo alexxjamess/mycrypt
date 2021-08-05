@@ -67,9 +67,11 @@ A user would come to the website if they wanted to evaluate their current portfo
 
 - The website could also evolve to allow user to create an account to store their portfolios and see up to date information.
 
-- add validation to choice of currency alert if not found 
+- add validation to choice of currency show alert if  coin not found 
 - add a delete row button 
-
+- change abtrusive javascript for onclick and oninput contain in HTML and change to event listeners javascript.
+- add row to select the type of output currency that the user would like eg. EUR, AUD
+- Add chart to show portfolio percentage, this has been removed due to erros but plans to reimplement -code in comment script.js
 
 
 ## Testing 
