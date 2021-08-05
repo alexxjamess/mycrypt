@@ -66,9 +66,9 @@ I have tested both HTML, CSS and Javascript for all pages and shown the results 
 - Row 1 Cell 1 Field contains a '$' created using a before content in css, this shows in all rows for this cell. The value in then created using an API function which is working correctly.
 - Row 1 Cell 2 Field contains a number input for the user to enter their number of coins. The user is allowed to enter decimal places as they may not own full values of some coins- however it is validated so they are unable to enter a negative number this works correctly.
 - Row 1 Cell 3 Field contains $ as Cell 1. The figure is entered into the cell when clicking calculate by multiplying cell 1 (current price) and cell 3 (coins/token). This function is working correctly.
-- Row 1 Cell 4 Field 
-- Row 1 Cell 5 Field
-- Row 1 Cell 6 
+- Row 1 Cell 4 Field contains $ as Cell 1. There is also a input box for the user to input their desired future price The user is allowed to enter decimal places as they may not own full values of some coins- however it is validated so they are unable to enter a negative number this works. This is currently working 
+- Row 1 Cell 5 Field contains $ as Cell 1. The figure is created by a function which is run when clicking calculate the function muitiplys cell 2 and cell 4. This is curently working 
+- Row 1 Cell 6 Field contais % using css. The function created is run when clicking the calculate button. The function works by subtracting cell 5 by cell 3 then diving it by  cell 3 and multiplying it by 100. The is currently working.
 - Each new from containts the same information and is working correctly 
 #### Calculate Button 
 - the calculate button works correctly, running three functions 
@@ -124,5 +124,6 @@ I have tested both HTML, CSS and Javascript for all pages and shown the results 
 
 ### Unfixed Bugs
 - There is still a bug on the register page where the bullet points on the benefits section just show a standard bullet point and not an image of the museum. I have been unable to fix this issue. The bullet points did work but stopped unexpectedly
+- My Portfolio table percentage change when a new row is added and figures are not entered before pressing calculate this disrupts the function and returns a NaN. The calculate button also needs to be entered twice if new information needs updating.
+- 
 
-<img src="./assets/images/readme-images/test-benefits.jpg" alt="image of ibenefits bullet points image" height="300px">
